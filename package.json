@@ -16,7 +16,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build &&  rm -rf docs && mv build docs",
+    "build-windows": "react-scripts build and rm -rf docs  =  DEL /S /Q webapp and mv build docs  =   move build docs",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

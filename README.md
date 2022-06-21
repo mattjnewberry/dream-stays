@@ -4,15 +4,15 @@
 
 - [npm](https://phoenixnap.com/kb/install-node-js-npm-on-windows)
 
-## Setup
+## Installing Depedencies
 
 Install the dependencies by running `npm install`
 
-## Building
+## Deploying the website
 
-Create the static files for our website by running `npm run build`
+Create the static files for our website by running `npm run build`, ensure they're commited.
 
-## Deploying
+Push to your main branch.
 
 ## Development
 
