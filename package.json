@@ -1,7 +1,7 @@
 {
   "name": "dream-stays-2022",
   "version": "0.1.0",
-  "homepage": "./dream-stays-2022",
+  "homepage": "./",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
