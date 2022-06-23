@@ -1,6 +1,5 @@
 .app {
   text-align: center;
-  background-color: #f8f5f4;
 }
 
 .app-logo {
@@ -15,9 +14,16 @@
 }
 
 .app-header {
+  width: 100%;
+  color: #f8f5f4;
+  background-color: #3662d8;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(5px + 2vmin);
+}
+
+.grid {
+  width: 95%;
 }
