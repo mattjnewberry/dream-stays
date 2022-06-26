@@ -30,6 +30,8 @@ View the app locally by running `npm start`
 
 Use the knowledge shared in the slide deck to complete these activities, eventually building your own dream stays website :grin:
 
+The exercises may not line up exactly with the sessions. If we get to the end of a session quickly, it may be worth just having a play with some different css/html/js/react and seeing what happens. You'll have the assistants on hand to help.
+
 ### Introduction
 
 We're building a collection of websites, each site is dedicated to inspiring customers to visit location with a collection of "Dream Stays" in the local area For example, your location may be London and your dream stays may be The Ritz, Camping in Crystal Palace and the Mandarin Oriental Hotel.
@@ -67,13 +69,23 @@ There are also a million ways to design and implement a website, we're not worri
 
 8. Now let's add another section title above the "card" html element (This is a react component, but we'll cover this in a later session). This section title could be something like "Stays" <details open><summary>Hint</summary><br>Try using the &lt;h3> tag for the section title</details>
 
-9. Finally, let's add a footer that we'll use in the next session. Try thinking how you can create a "division" at the bottom page. Set the colour of the footer to something different to the main page so we can see this division! <details open><summary>Hint</summary><br>Try using the &lt;div className="footer"> tag at the bottom of App.js and add .footer{background-colour: #3662d8; width: 100%; height: 100px} to the App.css </details>
+9. Finally, let's add a footer. Try thinking how you can create a "division" at the bottom page. Set the colour of the footer to something different to the main page so we can see this division! Add some content to the footer if you feel like it. <details open><summary>Hint</summary><br>Try using the &lt;div className="footer"> tag at the bottom of App.js and add .footer{background-colour: #3662d8; width: 100%; height: 100px} to the App.css </details>
 
 ### Lesson 2: Javascript
 
+1. We're going to create a small welcome message to the page that will greet the user and remember if a user has already visited the page! This will be quite a long exercise...
+
+   1.1 TODO: get this working https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
+
 ### Lesson 3: React
 
+1. TODO Exercises to update the react card images, description etc.try adding a price field to the data and displaying it on the react card component
+
+Try adding a lat/long field and displaying a map on the stay page https://github.com/google-map-react/google-map-react
+
 ### Lesson 4: Final additions and deployment
+
+1. TODO This time is theirs to work on whatever piece they want. addmore content, tidy it up, add some more sections on the location such as climate etc.
 
 ## Student sites
 
