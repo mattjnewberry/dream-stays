@@ -11,7 +11,7 @@ class App extends React.Component {
         <header className="app-header">
           <h1>Dream Stays</h1>
         </header>
-        <div className="grid">
+        <div className="container">
           {stays.map((stay) => (
             <Card
               id={stay.id}
