@@ -75,7 +75,42 @@ There are also a million ways to design and implement a website, we're not worri
 
 1. We're going to create a small welcome message to the page that will greet the user and remember if a user has already visited the page! This will be quite a long exercise...
 
-   1.1 TODO: get this working https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics
+2. Let's start by adding a button for updating the user's name. Add a button to the page <details open><summary>Hint</summary><br>Try using the &lt;button> html tag</details>
+
+3. Now let's add a simple javacript function with no parameters that outputs a message to the console, you can use console.log. The function has to go in App function before the return. <details open><summary>Hint</summary><br>`function setUserName() { console.log("You clicked the button!"); }`</details>
+
+4. Add an onClick event to the button created earlier that calls the function. <details open><summary>Hint</summary><br> `<button onclick="setUserName()">Click me</button> `</details>
+
+5. Open your site in the browser and right click -> inspect. Open the console tab on the right and click the button. You should see the output of your function! :grin:
+
+6. Let's add a HTML tag for holding the welcome message, Something simple like a `<p>` tag. Add an id attribute to the element <details open><summary>Hint</summary><br> `<p id="welcomeMessage"></p>`</details>
+
+7. Time to update the function to set the username to actually do something useful! Update the content of the function to the following. Try to understand what each line could be doing...
+
+```
+    let welcomeMessage = document.getElementById("welcomeMessage");
+    let username = prompt("Please enter your name.");
+    localStorage.setItem("name", username);
+    welcomeMessage.textContent = "Welcome, " + username;
+```
+
+8. Try running the site and checking it works, when we click the button we should be asked for a username, which sets the welcome message. Try refreshing the site, what happens?
+
+9. Finally, we need want a function to check the local storage after loading the page so that it "remembers" the username we set. To mak this easier we're going to use a tiny bit of React. The `userEffect` hook allows us to do side effects. Add the following to the App function in App.js:
+
+```
+  useEffect(() => {
+    let welcomeMessage = document.getElementById("welcomeMessage");
+    if (!localStorage.getItem("name")) {
+      setUserName();
+    } else {
+      let storedName = localStorage.getItem("name");
+      welcomeMessage.textContent = "Welcome, " + storedName;
+    }
+  });
+```
+
+Run the site, set the username again and click refresh. You should see the username is still set!
 
 ### Lesson 3: React
 
