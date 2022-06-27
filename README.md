@@ -28,7 +28,7 @@ View the app locally by running `npm start`
 
 ## Building a website tutorial :computer::rocket:
 
-### Introduction
+### Introduction :wave:
 
 A fictional travel agent is building a collection of websites for a new travel brand to use in their marketing material. Each site is dedicated to inspiring customers to visit a destination with a collection of "Dream Stays" in the local area. The travel agent wants their customers to be inspired to travel so that they book holidays via them!
 
@@ -44,7 +44,7 @@ The exercises may not line up exactly with the sessions. If we get to the end of
 
 There are also a million ways to design and implement a website, we're not worried about using best practices here, let's just get it working!
 
-### Setup
+### Setup :wrench:
 
 1. To begin with, let's pick a destination we want to focus on. Throughout the exercises we'll need to do some research and provide some information about the general area. Be creative! Pick a destination you've always wanted to visit or that you might think would be an interesting destination to visit with some cool dream stays.
 
@@ -68,7 +68,7 @@ We only need to be concerned with the src folder for the exercises!
 - Remember to save the file after each change, otherwise it won't be shown in the site locally!
 - Deploy it locally whilst your working, this will mean any changes to the code are immediately displayed
 
-### Lesson 1: HTML and CSS
+### Lesson 1: HTML and CSS :one:
 
 1. First, let's add our location to the top of the page undeaneath the header. What html tag do you think is a good choice here, considering the page already has a `<h1>`?. Add the tag with you location as the content undeaneath the header in `App.js`<details closed><summary>Hint</summary><br>`<h2>London<h2>`</details>
 
@@ -93,7 +93,7 @@ CSS:
 
    CSS: `.footer{background-colour: #3662d8; width: 100%;height: 100px}`</details>
 
-### Lesson 2: Javascript
+### Lesson 2: Javascript :two:
 
 1. We're going to create a small welcome message to the page that will greet the user and remember if a user has already visited the page! This will be quite a long exercise...
 
@@ -138,7 +138,7 @@ welcomeMessage.textContent = "Welcome, " + storedName;
 
 Run the site, set the username again and click refresh. You should see the username is still set!
 
-### Lesson 3: React
+### Lesson 3: React :three:
 
 1. Now let's work on our dream stays components. The cards are created as React component, which you can see in /components/Card.js. We're exporitng a "Card" component which can be used on other pages (such as the homepage). Take a look at the code and see if you can find out where we're pulling the Card information from such as the description...<details closed><summary>Hint</summary><br>There is a `getStays` function being called in App.js, which returns our list of objects from data.js</details>
 
@@ -160,13 +160,13 @@ Run the site, set the username again and click refresh. You should see the usern
 
 10. Find some promotational video for your stay or location for each stay and display it on the stay page!
 
-### Lesson 4: Final additions and deployment
+### Lesson 4: Final additions and deployment :four:
 
-1. TODO This time is theirs to work on whatever piece they want. add more content, tidy it up, add some more sections on the location such as climate etc.
+1. Congratualions on making it to the end! :tada:. This final sesison is for you to make any last minute changes or fixes; Add any content you like or play around with some more of the technologies we've learnt by creating the website.
 
 ## Student sites
 
-Add links to student sites here!
+TODO: Add links to student sites here!
 
 ```
 
