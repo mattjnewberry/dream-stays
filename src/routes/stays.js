@@ -6,7 +6,7 @@ import React from "react";
 export default function Stay() {
   let params = useParams();
   let stay = getStay(params.stayId);
-  return (
+  return stay ? (
     <div className="app">
       <header className="app-header">
         <h1>Dream Stays</h1>
@@ -15,5 +15,7 @@ export default function Stay() {
       <h2>{stay.name}</h2>
       <p className="stay-description">{stay.description}</p>
     </div>
+  ) : (
+    <></>
   );
 }
