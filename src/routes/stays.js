@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import "./stays.css";
 import { getStay } from "../data";
+import React from "react";
 
 export default function Stay() {
   let params = useParams();

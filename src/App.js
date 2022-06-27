@@ -14,6 +14,7 @@ export default function App() {
       <div className="container">
         {stays.map((stay) => (
           <Card
+            key={stay.id}
             id={stay.id}
             name={stay.name}
             description={stay.description}

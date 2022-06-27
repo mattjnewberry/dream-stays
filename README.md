@@ -150,7 +150,15 @@ Run the site, set the username again and click refresh. You should see the usern
 
 5. Next, we want to use this price attibute in the Card component, so head over to Card.js and add a new HTML element that could display the price. Remember it's just a text field. Feel free to add some CSS to this it to look a bit nicer.<details closed><summary>Hint</summary><br>`<p className="card-price"> {props.price} </p>`</details>
 
-TODO: Try adding a lat/long field and displaying a map on the stay page https://github.com/google-map-react/google-map-react
+6. The travel agent wants each Stay page to feature a promotational video. We can use the rich ecosystem of react to embded a video super easily. For this exercise we will be using https://github.com/CookPete/react-player. First off, install the package by running `npm install react-player`
+
+7. Next, import the conmponent from the package by adding `import ReactPlayer from "react-player";` to the top of Stay.js (With the other imports)
+
+8. Now add the component to the page using `<ReactPlayer url="https://www.youtube.com/watch?v=ysz5S6PUM-U" />`. You should see the video is now avaiable on the page! :grin:
+
+9. We want a different video for each stay, so we're going to to need to do the same steps we did earlier to display the price, but this time we need to update stay.js rather than the homepage and card component.<details closed><summary>Hint</summary><br>`{ id: "theritz", name: "The Ritz", img: "https://media.cntraveler.com/photos/5f6198aa987090832029b181/16:9/w_2560%2Cc_limit/ritz-london-exterior.jpg", description: "We are London’s most iconic hotel. A five star haven on Piccadilly that is famous the world over for its historic elegance, impeccable service, impressive suites, and legendary Afternoon Tea.", nearby: ["London eye", "Buckingham Palace", "Tower Bridge"], videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" }` && `<ReactPlayer url={stay.videoUrl} />`</details>
+
+10. Find some promotational video for your stay or location for each stay and display it on the stay page!
 
 ### Lesson 4: Final additions and deployment
 
