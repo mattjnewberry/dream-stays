@@ -49,41 +49,41 @@ There are also a million ways to design and implement a website, we're not worri
 
 ### Lesson 1: HTML and CSS
 
-1. First, let's add our location to the top of the page undeaneath the header. What html tag do you think is a good choice here, considering the page already has a `<h1>`?. Add the tag with you location as the content undeaneath the header in `App.js`<details open><summary>Hint</summary><br>Try adding "&lt;h2>London&lt;h2>"</details>
+1. First, let's add our location to the top of the page undeaneath the header. What html tag do you think is a good choice here, considering the page already has a `<h1>`?. Add the tag with you location as the content undeaneath the header in `App.js`<details closed><summary>Hint</summary><br>Try adding "&lt;h2>London&lt;h2>"</details>
 
-2. Okay great, our page has our location as the title, but it looks a little small, why not try increasing the font size of your title using some css.<details open><summary>Hint</summary><br>You can either change the font size of all &lt;h2> tags using
+2. Okay great, our page has our location as the title, but it looks a little small, why not try increasing the font size of your title using some css.<details closed><summary>Hint</summary><br>You can either change the font size of all &lt;h2> tags using
    "h2 {
    font-size: 24px;
    }" or add a custom css class or ID to your title </details>
 
 3. That looks better! Now to add some content. We need a slogan for our location. Think of a catchy slogain for your location, for example "Explore London's iconic sights and create a life long memory"
 
-4. Now let's add this to our site underneath our location title. Try making the slogan italic and bold so it stand out.<details open><summary>Hint</summary><br>Add your slogan using a "&lt;p className=location-slogan>" tag undeaneath your location title. Add ".location-slogan{font-weight: bold;
+4. Now let's add this to our site underneath our location title. Try making the slogan italic and bold so it stand out.<details closed><summary>Hint</summary><br>Add your slogan using a "&lt;p className=location-slogan>" tag undeaneath your location title. Add ".location-slogan{font-weight: bold;
    font-style: italic;}" to your App.css</details>
 
-5. Next, section that has an un-ordered list of local activities your traveller can experience, for example "Thames river boat tour", "England playing at wembley" etc. The section should include a title such as "Local Acitivities"<details open><summary>Hint</summary><br>Try using &lt;h3 for the section title and &lt;ul>&lt;li>my activity&lt;/i>&lt;/ul> for the list</details>
+5. Next, section that has an un-ordered list of local activities your traveller can experience, for example "Thames river boat tour", "England playing at wembley" etc. The section should include a title such as "Local Acitivities"<details closed><summary>Hint</summary><br>Try using &lt;h3 for the section title and &lt;ul>&lt;li>my activity&lt;/i>&lt;/ul> for the list</details>
 
 6. Let's personalise your site a little. We're going update the colour scheme used. Go to https://htmlcolorcodes.com/color-picker/ and pick your site colour, make sure you copy the hex code.
 
 7. Set the colour of your different elements using the "background-colour" css attribute. Explore setting the background colour of the app.
 
-8. Now let's add another section title above the "card" html element (This is a react component, but we'll cover this in a later session). This section title could be something like "Stays" <details open><summary>Hint</summary><br>Try using the &lt;h3> tag for the section title</details>
+8. Now let's add another section title above the "card" html element (This is a react component, but we'll cover this in a later session). This section title could be something like "Stays" <details closed><summary>Hint</summary><br>Try using the &lt;h3> tag for the section title</details>
 
-9. Finally, let's add a footer. Try thinking how you can create a "division" at the bottom page. Set the colour of the footer to something different to the main page so we can see this division! Add some content to the footer if you feel like it. <details open><summary>Hint</summary><br>Try using the &lt;div className="footer"> tag at the bottom of App.js and add .footer{background-colour: #3662d8; width: 100%; height: 100px} to the App.css </details>
+9. Finally, let's add a footer. Try thinking how you can create a "division" at the bottom page. Set the colour of the footer to something different to the main page so we can see this division! Add some content to the footer if you feel like it. <details closed><summary>Hint</summary><br>Try using the &lt;div className="footer"> tag at the bottom of App.js and add .footer{background-colour: #3662d8; width: 100%; height: 100px} to the App.css </details>
 
 ### Lesson 2: Javascript
 
 1. We're going to create a small welcome message to the page that will greet the user and remember if a user has already visited the page! This will be quite a long exercise...
 
-2. Let's start by adding a button for updating the user's name. Add a button to the page <details open><summary>Hint</summary><br>Try using the &lt;button> html tag</details>
+2. Let's start by adding a button for updating the user's name. Add a button to the page <details closed><summary>Hint</summary><br>Try using the &lt;button> html tag</details>
 
-3. Now let's add a simple javacript function with no parameters that outputs a message to the console, you can use console.log. The function has to go in App function before the return. <details open><summary>Hint</summary><br>`function setUserName() { console.log("You clicked the button!"); }`</details>
+3. Now let's add a simple javacript function with no parameters that outputs a message to the console, you can use console.log. The function has to go in App function before the return. <details closed><summary>Hint</summary><br>`function setUserName() { console.log("You clicked the button!"); }`</details>
 
-4. Add an onClick event to the button created earlier that calls the function. <details open><summary>Hint</summary><br> `<button onclick="setUserName()">Click me</button> `</details>
+4. Add an onClick event to the button created earlier that calls the function. <details closed><summary>Hint</summary><br> `<button onclick="setUserName()">Click me</button> `</details>
 
 5. Open your site in the browser and right click -> inspect. Open the console tab on the right and click the button. You should see the output of your function! :grin:
 
-6. Let's add a HTML tag for holding the welcome message, Something simple like a `<p>` tag. Add an id attribute to the element <details open><summary>Hint</summary><br> `<p id="welcomeMessage"></p>`</details>
+6. Let's add a HTML tag for holding the welcome message, Something simple like a `<p>` tag. Add an id attribute to the element <details closed><summary>Hint</summary><br> `<p id="welcomeMessage"></p>`</details>
 
 7. Time to update the function to set the username to actually do something useful! Update the content of the function to the following. Try to understand what each line could be doing...
 
