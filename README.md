@@ -76,10 +76,7 @@ We only need to be concerned with the src folder for the exercises!
 
 3. That looks better! Now to add some content. We need a slogan for our location. Think of a catchy slogan for your location, for example "Explore London's iconic sights and create a life long memory!" (I'm sure you can think of a better one than that)
 
-4. Now let's add this to our site underneath our location title. Try making the slogan italic and bold so it stands out.<details closed><summary>Hint</summary><br>HTML: `<p className=location-slogan>my slogan</p>`
-CSS:
-`.location-slogan{font-weight: bold; font-style: italic;}`
-</details>
+4. Now let's add this to our site underneath our location title. Try making the slogan italic and bold so it stands out.<details closed><summary>Hint</summary><br>HTML: `<p className=location-slogan>my slogan</p>`CSS:`.location-slogan{font-weight: bold; font-style: italic;}`</details>
 
 5. Next, section that has an un-ordered list of local activities your traveller can experience, for example "Thames river boat tour", "England playing at wembley" etc. The section should include a title such as "Local Acitivities"<details closed><summary>Hint</summary><br>`<h3>Activites</h3>` for the section title and `<ul><li>my activity</i></ul>` for the list</details>
 
@@ -169,5 +166,5 @@ Run the site, set the username again and click refresh. You should see the usern
 TODO: Add links to student sites here!
 
 ```
-
+links go here
 ```
