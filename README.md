@@ -141,7 +141,7 @@ Run the site, set the username again and click refresh. You should see the usern
 
 2. Let's update our stays. Update each stay's description, image, name etc. to be something unique related to your destination, be as creative as you like!
 
-3. The travel agent has informed us they want us to advertise the avg price of the stays too. First, you'll need to add a field to your stays data, it can be a string as we are only displaying the price and aren't doing any calculations with it<details closed><summary>Hint</summary><br>`{ id: "theritz", name: "The Ritz", img: "https://media.cntraveler.com/photos/5f6198aa987090832029b181/16:9/w_2560%2Cc_limit/ritz-london-exterior.jpg", description: "We are London’s most iconic hotel. A five star haven on Piccadilly that is famous the world over for its historic elegance, impeccable service, impressive suites, and legendary Afternoon Tea.", nearby: ["London eye", "Buckingham Palace", "Tower Bridge"], price: "£999" }`</details>
+3. The travel agent has informed us they want us to advertise the avg price of the stays too. For this we will need to use the Pricing-Server we worked on earlier. You should look at the `Card.js`, `pricing-server.js`, ask one of us for hints
 
 4. Now we want to display this price on the card component. Go to App.js and pass our new price attribute to the Card component.<details closed><summary>Hint</summary><br>`<Card id={stay.id} name={stay.name} description={stay.description} img={stay.img} price={stay.price} />`</details>
 
