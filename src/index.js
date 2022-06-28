@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
+import {HashRouter, Route, Routes} from "react-router-dom";
 import Stay from "./routes/stays";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
