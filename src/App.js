@@ -3,6 +3,7 @@ import React from "react";
 import Card from "./components/Card";
 import { getStays } from "./data";
 
+// Main app
 export default function App() {
   let stays = getStays();
   return (
