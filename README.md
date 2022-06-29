@@ -70,7 +70,7 @@ We only need to be concerned with the src folder for the exercises!
 
 ### Lesson 1: HTML and CSS :one:
 
-1. First, let's add our location to the top of the page undeaneath the header. What html tag do you think is a good choice here, considering the page already has a `<h1>`?. Add the tag with you location as the content undeaneath the header in `App.js`<details closed><summary>Hint</summary><br>`<h2>London<h2>`</details>
+1. First, let's add our location to the top of the page undeaneath the header. What html tag do you think is a good choice here, considering the page already has a `<h1>`?. Add the tag with you location as the content undeaneath the header in `App.js`<details closed><summary>Hint</summary><br>`<h2>London</h2>`</details>
 
 2. Okay great, our page has our destination as the title, but it looks a little small, why not try increasing the font size of your title using some css.<details closed><summary>Hint</summary><br>You can either change the font size of all &lt;h2> tags using ` h2 { font-size: 64px; }`</details>
 
