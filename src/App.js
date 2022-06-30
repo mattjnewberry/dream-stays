@@ -3,7 +3,6 @@ import React from "react";
 import Card from "./components/Card";
 import { getStays } from "./data";
 
-// Main app
 export default function App() {
   let stays = getStays();
   return (
@@ -11,6 +10,7 @@ export default function App() {
       <header className="app-header">
         <h1>Dream Stays</h1>
       </header>
+      <h2>London</h2>
       <div className="container">
         {stays.map((stay) => {
           return (

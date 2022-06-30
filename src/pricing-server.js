@@ -1,5 +1,5 @@
 async function callPricingService(path) {
-    const hostUrl = "http://127.0.0.1:5000"
+    const hostUrl = "http://kah2021.pythonanywhere.com/"
     const pricingUrl = hostUrl + path
     console.log("Getting price")
 
@@ -10,3 +10,4 @@ export function getHotelPrice(hotel_id) {
     let path = `/hotel/price/${hotel_id}`
     return callPricingService(path)
 }
+
