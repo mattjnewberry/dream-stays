@@ -9,8 +9,8 @@ export default function App() {
     <div className="app">
       <header className="app-header">
         <h1>Dream Stays</h1>
-      </header>
-      <h2>London</h2>
+      <header className="sub-heading">
+      <h2>England</h2>
       <div className="container">
         {stays.map((stay) => {
           return (
