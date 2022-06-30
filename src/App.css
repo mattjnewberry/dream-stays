@@ -22,5 +22,10 @@
 }
 
 h2 {
-  font-size: 1000px;
+  font-size: 64px;
+}
+
+.location-slogan {
+  font-weight: bold;
+  font-style: italic;
 }
