@@ -23,13 +23,13 @@ We only need to be concerned with the src folder for the exercises!
   - index.css (We can ignore this for now)
   - index.js (We can ignore this for now)
 
-### Exercise 0: Picking a location :zero: [15 minutes]
+### Exercise 0: Picking a location [15 minutes]
 
-1. First, pick a location. This can be any location you like. Perhaps there's a place you've always wanted to visit or just random town from google maps! [5 minutes]
+1. First, pick a location. This can be any location you like. Perhaps there's a place you've always wanted to visit or just random town from google maps!
 
 :information_source: Info for workshop lead, if codesandbox is not working, we may have to use codepen and use the html and css in the /alt directory. Most of the HTML and CSS exercises will still work but they cannot save their work without creating an account.
 
-2. Next, we want to actually start working on our website!
+2. Next, we want to actually start working on our website! 
     1. Go to http://codesandbox.io/
     2. Click `Start coding for free` at the bottom of the page
     3. Click `Import project` on the left
@@ -37,11 +37,11 @@ We only need to be concerned with the src folder for the exercises!
     5. Click `Import to projects`
     6. This should open up a new window with the code and the website running. (Don't close this window!)
 
-2. Next, we need to update your website title to include your new location. Go to src/App.js and change the title to include your location. [2 minutes]
+2. Next, we need to update your website title to include your new location. Go to src/App.js and change the title to include your location.
 
 3. Great. Now let's start adding content to our website using html and css!
 
-### Exercise 1: HTML and CSS :one:
+### Exercise 1: HTML and CSS :pencil2:
 
 1. First, we need a slogan for our location. Think of a catchy slogan for your location, for example "Explore London's iconic sights and create a life long memory!" (I'm sure you can think of a better one than that). [3 minutes]
 
@@ -73,7 +73,7 @@ Then we want to style this element, so add the following to src/App.css
 
    CSS: `.footer{background-colour: #3662d8; width: 100%;height: 100px}`</details>
 
-### Exercise 2: Javascript :two:
+### Exercise 2: Javascript :computer:
 
 1. We're going to create a small welcome message to the page that will greet the user and remember if a user has already visited the page! This will be quite a long exercise...
 
@@ -118,7 +118,7 @@ welcomeMessage.textContent = "Welcome, " + storedName;
 
 Run the site, set the username again and click refresh. You should see the username is still set!
 
-### Exercise 3: React :three:
+### Exercise 3: React :rocket:
 
 1. Now let's work on our dream stays components. The cards are created as React component, which you can see in /components/Card.js. We're exporitng a "Card" component which can be used on other pages (such as the homepage). Take a look at the code and see if you can find out where we're pulling the Card information from such as the description...<details closed><summary>Hint</summary><br>There is a `getStays` function being called in App.js, which returns our list of objects from data.js</details>
 
