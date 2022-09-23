@@ -2,19 +2,13 @@
 
 A local travel agent is building a websites to show off a selection of hotels in their area. They want their website to encouragage people to visit a destnation and stay at one of the travel agents "dream stays"
 
-For example, a London travel agent will want to market local activities, the weather and and your dream stays may be The Ritz, Camping in Crystal Palace and the Mandarin Oriental Hotel.
+For example, your destination may be London and your dream stays may be The London Grand Hotel, Camping in Crystal Palace and a Thames canal boat.
 
-Remember the local travle agent really wants to market the location and "Dream stays" to our customers so they'll book a holiday, so try to encourage people to visit. Perhaps the weather is exceptionally nice, or there is a range of local wildlife to see. Think about the type of content that would persuade YOU to travel to a specific destination.
+Remember the local travle agent really wants to market the location and "Dream stays" to our customers so they'll book a holiday, so try to encourage people to visit. Perhaps the weather is exceptionally nice, or there is a range of local wildlife to see. Think about the type of content that would persuade YOU to travel to a specific destination. BE CREATIVE! We want a website that stands out, not a boring website.
 
 Remember to use the knowledge shared in the slide deck to complete these activities and ask the assistents for help. We will walk through the first exercise together.
 
 There are also a million ways to design and implement a website, we're not worried about using best practices here, let's just get it working!
-
-### Setup :wrench:
-
-1. To begin with, let's pick a destination we want to focus on. Throughout the exercises we'll need to do some research and provide some information about the general area. Be creative! Pick a destination you've always wanted to visit or that you might think would be an interesting destination to visit with some cool dream stays.
-
-2. When templating the repository, you can cal your repository anything you think makes sense (Remember it's public!), maybe something like "<your_location>-dream-stays" e.g "London-dream-stays"
 
 #### File Structure
 
@@ -29,22 +23,45 @@ We only need to be concerned with the src folder for the exercises!
   - index.css (We can ignore this for now)
   - index.js (We can ignore this for now)
 
-#### Tips & Tricks :information_source:
+### Exercise 0: Picking a location :zero: [15 minutes]
 
-- Remember to save the file after each change, otherwise it won't be shown in the site locally!
-- Deploy it locally whilst your working, this will mean any changes to the code are immediately displayed
+1. First, pick a location. This can be any location you like. Perhaps there's a place you've always wanted to visit or just random town from google maps! [5 minutes]
 
-### Lesson 1: HTML and CSS :one:
+:information_source: Info for workshop lead, if codesandbox is not working, we may have to use codepen and use the html and css in the /alt directory. Most of the HTML and CSS exercises will still work but they cannot save their work without creating an account.
 
-1. First, let's add our location to the top of the page undeaneath the header. What html tag do you think is a good choice here, considering the page already has a `<h1>`?. Add the tag with you location as the content undeaneath the header in `App.js`<details closed><summary>Hint</summary><br>`<h2>London</h2>`</details>
+2. Next, we want to actually start working on our website!
+    1. Go to http://codesandbox.io/
+    2. Click `Start coding for free` at the bottom of the page
+    3. Click `Import project` on the left
+    4. Copy and paste `https://github.com/mattjnewberry/dream-stays-2022` into the Github Repository Url Box
+    5. Click `Import to projects`
+    6. This should open up a new window with the code and the website running. (Don't close this window!)
 
-2. Okay great, our page has our destination as the title, but it looks a little small, why not try increasing the font size of your title using some css.<details closed><summary>Hint</summary><br>You can either change the font size of all &lt;h2> tags using ` h2 { font-size: 64px; }`</details>
+2. Next, we need to update your website title to include your new location. Go to src/App.js and change the title to include your location. [2 minutes]
 
-3. That looks better! Now to add some content. We need a slogan for our location. Think of a catchy slogan for your location, for example "Explore London's iconic sights and create a life long memory!" (I'm sure you can think of a better one than that)
+3. Great. Now let's start adding content to our website using html and css!
 
-4. Now let's add this to our site underneath our location title. Try making the slogan italic and bold so it stands out.<details closed><summary>Hint</summary><br>HTML: `<p className=location-slogan>my slogan</p>`CSS:`.location-slogan{font-weight: bold; font-style: italic;}`</details>
+### Exercise 1: HTML and CSS :one:
 
-5. Next, section that has an un-ordered list of local activities your traveller can experience, for example "Thames river boat tour", "England playing at wembley" etc. The section should include a title such as "Local Acitivities"<details closed><summary>Hint</summary><br>`<h3>Activites</h3>` for the section title and `<ul><li>my activity</i></ul>` for the list</details>
+1. First, we need a slogan for our location. Think of a catchy slogan for your location, for example "Explore London's iconic sights and create a life long memory!" (I'm sure you can think of a better one than that). [3 minutes]
+
+2. Now let's add this to our site underneath our location title. Try making the slogan italic and bold so it stands out.
+
+Add the following to src/App.js under the title. Play around with placing it on different areas of the page
+
+```
+<p className=app-slogan>my slogan</p>`
+```
+
+Then we want to style this element, so add the following to src/App.css
+
+```
+.location-slogan{font-weight: bold; font-style: italic;}
+```
+
+//TODO Update below exercises to be easier to follow (JS needs major alterations) 
+
+3. Next, section that has an un-ordered list of local activities your traveller can experience, for example "Thames river boat tour", "England playing at wembley" etc. The section should include a title such as "Local Acitivities"<details closed><summary>Hint</summary><br>`<h3>Activites</h3>` for the section title and `<ul><li>my activity</i></ul>` for the list</details>
 
 6. Let's personalise your site a little. We're going update the colour scheme used. Go to https://htmlcolorcodes.com/color-picker/ and pick your site colour, make sure you copy the hex code.
 
@@ -56,7 +73,7 @@ We only need to be concerned with the src folder for the exercises!
 
    CSS: `.footer{background-colour: #3662d8; width: 100%;height: 100px}`</details>
 
-### Lesson 2: Javascript :two:
+### Exercise 2: Javascript :two:
 
 1. We're going to create a small welcome message to the page that will greet the user and remember if a user has already visited the page! This will be quite a long exercise...
 
@@ -101,7 +118,7 @@ welcomeMessage.textContent = "Welcome, " + storedName;
 
 Run the site, set the username again and click refresh. You should see the username is still set!
 
-### Lesson 3: React :three:
+### Exercise 3: React :three:
 
 1. Now let's work on our dream stays components. The cards are created as React component, which you can see in /components/Card.js. We're exporitng a "Card" component which can be used on other pages (such as the homepage). Take a look at the code and see if you can find out where we're pulling the Card information from such as the description...<details closed><summary>Hint</summary><br>There is a `getStays` function being called in App.js, which returns our list of objects from data.js</details>
 

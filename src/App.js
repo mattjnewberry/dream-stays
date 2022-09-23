@@ -9,8 +9,9 @@ export default function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>Dream Stays</h1>
+        <h1>Dream Stays: London</h1>
       </header>
+      <br />
       <div className="container">
         {stays.map((stay) => {
           return (
@@ -23,6 +24,22 @@ export default function App() {
             />
           );
         })}
+      </div>
+      <hr className="app-divider" />
+      <div>
+        <h2 className="app-subheader">Climate</h2>
+        <p>
+          London has some of the best weather in the world, with average highs
+          of 15 degress celcius
+        </p>
+      </div>
+      <hr className="app-divider" />
+      <div>
+        <h2 className="app-subheader">History</h2>
+        <p>
+          London has a rich history dating back to 43 CE. Explore edwardian and
+          victorian architecture.
+        </p>
       </div>
     </div>
   );
