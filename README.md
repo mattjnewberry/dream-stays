@@ -1,6 +1,6 @@
 # dream-stays-2022 :hotel::airplane:
 
-This is a starter repository for the work experience week (27-01 June/July 2022) at Expedia Group. Use this repo to create a super simple react app about some dream stays.
+This is a starter repository for building a dream stays website using a cloud based IDE.
 
 ## Pre-requisite
 
