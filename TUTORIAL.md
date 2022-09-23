@@ -6,7 +6,7 @@ For example, your destination may be London and your dream stays may be The Lond
 
 Remember the local travle agent really wants to market the location and "Dream stays" to our customers so they'll book a holiday, so try to encourage people to visit. Perhaps the weather is exceptionally nice, or there is a range of local wildlife to see. Think about the type of content that would persuade YOU to travel to a specific destination. BE CREATIVE! We want a website that stands out, not a boring website.
 
-Remember to use the knowledge shared in the slide deck to complete these activities and ask the assistents for help. We will walk through the first exercise together.
+Remember to use the knowledge shared in the slide deck to complete these activities and ask the assistents for help. We will walk through the exercises together but you'll have time to after each to go back through and update the content.
 
 There are also a million ways to design and implement a website, we're not worried about using best practices here, let's just get it working!
 
@@ -25,9 +25,9 @@ We only need to be concerned with the src folder for the exercises!
 
 ### Exercise 0: Picking a location [15 minutes]
 
-1. First, pick a location. This can be any location you like. Perhaps there's a place you've always wanted to visit or just random town from google maps!
-
 :information_source: Info for workshop lead, if codesandbox is not working, we may have to use codepen and use the html and css in the /alt directory. Most of the HTML and CSS exercises will still work but they cannot save their work without creating an account.
+
+1. First, pick a location. This can be any location you like. Perhaps there's a place you've always wanted to visit or just random town from google maps!
 
 2. Next, we want to actually start working on our website! 
     1. Go to http://codesandbox.io/
@@ -41,23 +41,23 @@ We only need to be concerned with the src folder for the exercises!
 
 3. Great. Now let's start adding content to our website using html and css!
 
-### Exercise 1: HTML and CSS :pencil2:
+### Exercise 1: HTML and CSS :pencil2: [1 hour]
 
-1. First, we need a slogan for our location. Think of a catchy slogan for your location, for example "Explore London's iconic sights and create a life long memory!" (I'm sure you can think of a better one than that). [3 minutes]
+1. First, we need a slogan for our location. Think of a catchy slogan for your location, for example "Explore London's iconic sights and create a life long memory!" (I'm sure you can think of a better one than that).
 
 2. Now let's add this to our site underneath our location title. Try making the slogan italic and bold so it stands out.
 
-Add the following to src/App.js under the title. Play around with placing it on different areas of the page
+    Add the following to src/App.js under the title. Play around with placing it on different areas of the page
 
-```
-<p className=app-slogan>my slogan</p>`
-```
+    ```
+    <p className=app-slogan>my slogan</p>`
+    ```
 
-Then we want to style this element, so add the following to src/App.css
+    Then we want to style this element, so add the following to src/App.css
 
-```
-.location-slogan{font-weight: bold; font-style: italic;}
-```
+    ```
+    .location-slogan{font-weight: bold; font-style: italic;}
+    ```
 
 //TODO Update below exercises to be easier to follow (JS needs major alterations) 
 
