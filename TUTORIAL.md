@@ -1,16 +1,12 @@
 ### Introduction :wave:
 
-A fictional travel agent is building a collection of websites for a new travel brand to use in their marketing material. Each site is dedicated to inspiring customers to visit a destination with a collection of "Dream Stays" in the local area. The travel agent wants their customers to be inspired to travel so that they book holidays via them!
+A local travel agent is building a websites to show off a selection of hotels in their area. They want their website to encouragage people to visit a destnation and stay at one of the travel agents "dream stays"
 
-For example, your destination may be London and your dream stays may be The Ritz, Camping in Crystal Palace and the Mandarin Oriental Hotel.
+For example, a London travel agent will want to market local activities, the weather and and your dream stays may be The Ritz, Camping in Crystal Palace and the Mandarin Oriental Hotel.
 
-Remember we want to really sell this location and "Dream stays" to our customers so they'll book a holiday, so try to market it as best as you can. Think about the type of content that would persuade YOU to travel to a specific destination.
+Remember the local travle agent really wants to market the location and "Dream stays" to our customers so they'll book a holiday, so try to encourage people to visit. Perhaps the weather is exceptionally nice, or there is a range of local wildlife to see. Think about the type of content that would persuade YOU to travel to a specific destination.
 
-We'll add content as we move through the exercises. Don't worry about the content being perfect, the final session is dedicated to adding any final touches to the site.
-
-Remember to use the knowledge shared in the slide deck to complete these activities and ask the assitants for help.
-
-The exercises may not line up exactly with the sessions. If we get to the end of a session quickly, it may be worth just having a play with some different css/html/js/react and seeing what happens
+Remember to use the knowledge shared in the slide deck to complete these activities and ask the assistents for help. We will walk through the first exercise together.
 
 There are also a million ways to design and implement a website, we're not worried about using best practices here, let's just get it working!
 
