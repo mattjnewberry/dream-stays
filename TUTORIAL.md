@@ -25,19 +25,25 @@ We only need to be concerned with the src folder for the exercises!
 
 ### Exercise 0: Picking a location [15 minutes]
 
-:information_source: Info for workshop lead, if codesandbox is not working, we may have to use codepen and use the html and css in the /alt directory. Most of the HTML and CSS exercises will still work but they cannot save their work without creating an account.
+:information_source: Info for workshop lead, if codesandbox is not working, we may have to use codepen and use the html and css in the /alt directory. Most of the HTML and CSS exercises will still work but they cannot save their work without creating an account. 
 
 1. First, pick a location. This can be any location you like. Perhaps there's a place you've always wanted to visit or just random town from google maps!
 
 2. Next, we want to actually start working on our website! 
-    1. Go to http://codesandbox.io/
-    2. Click `Start coding for free` at the bottom of the page
-    3. Click `Import project` on the left
-    4. Copy and paste `https://github.com/mattjnewberry/dream-stays-2022` into the Github Repository Url Box
-    5. Click `Import to projects`
-    6. This should open up a new window with the code and the website running. (Don't close this window!)
+    1. For codesandbox do:
+      1. Go to http://codesandbox.io/
+      2. Click `Start coding for free` at the bottom of the page
+      3. Click `Import project` on the left
+      4. Copy and paste `https://github.com/mattjnewberry/dream-stays-2022` into the Github Repository Url Box
+      5. Click `Import to projects`
+      6. This should open up a new window with the code and the website running. (Don't close this window
+    2. For codepen do:
+      1. Go to https://codepen.io/
+      2. Click on `Start Coding` in the top left
+      3. Copy the contents from alt/index.html to the html section in codepen
+      4. Copy the contents from styles.css to the css section of codepen 
 
-2. Next, we need to update your website title to include your new location. Go to src/App.js and change the title to include your location.
+2. Next, we need to update your website title to include your new location. Update the `<h1>` tag in the html and change the title to include your location.
 
 3. Great. Now let's start adding content to our website using html and css!
 
@@ -47,107 +53,131 @@ We only need to be concerned with the src folder for the exercises!
 
 2. Now let's add this to our site underneath our location title. Try making the slogan italic and bold so it stands out.
 
-    Add the following to src/App.js under the title. Play around with placing it on different areas of the page
+    Add the following to your html under the title. Play around with placing it on different areas of the page
 
     ```
     <p className=app-slogan>my slogan</p>`
     ```
 
-    Then we want to style this element, so add the following to src/App.css
+    Then we want to style this element, so add the following to the css
 
     ```
     .location-slogan{font-weight: bold; font-style: italic;}
     ```
+    
+3. The travel agent has asked that the slogan stands out on the page, and to do this he wants to change the color.
 
-//TODO Update below exercises to be easier to follow (JS needs major alterations) 
+    Go to https://www.w3schools.com/colors/colors_picker.asp and select pick a color for your slogan. Copy the 7 digit code, it should look something like `#ffffff`. THis is a hex code.
+    
+    Update the css element we just created to include your hex code.
+    ```
+    .location-slogan{font-weight: bold; font-style: italic;, color: <INSERT_COLOR>}
+    ```
 
-3. Next, section that has an un-ordered list of local activities your traveller can experience, for example "Thames river boat tour", "England playing at wembley" etc. The section should include a title such as "Local Acitivities"<details closed><summary>Hint</summary><br>`<h3>Activites</h3>` for the section title and `<ul><li>my activity</i></ul>` for the list</details>
+4. Next, we need to update the stays to be relevant to your location. We'll do the first card together.
 
-6. Let's personalise your site a little. We're going update the colour scheme used. Go to https://htmlcolorcodes.com/color-picker/ and pick your site colour, make sure you copy the hex code.
+    Think of a stay you'd like to advertise that would encourage travellers to visit your destination. 
+    
+    Update the first "Card" with the title of this stay
+    
+    Go to https://unsplash.com/ and find a relevant picture for your stay
+    
+    Click on an image and right click, select `Copy image address`
+    
+    Paste this URL into the `src` attribrute of the `img` tag for the card. 
+    
+    e.g 
+    ```
+    <img class="card-header-img" alt="alt2" src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"/>
+    ```
+    
+    Give the stay a short description
+    
+5. Finally, let's add a footer to the page with the name of the author and the year
 
-7. Set the colour of your different elements using the "background-colour" css attribute. Explore setting the background colour of the app and other elements.
+    Add a div to the bottom of the page with
+    
+    ```
+    	<div class="footer">
+        </div>
+    ```
+    
+    Add a CSS element to style the footer with
+    
+    ```
+    .footer {
+        width: 100%;
+        color: #f8f5f4;
+        background-color: #3662d8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: calc(10px + 2vmin);
+    }
+    ```
+    
+6. Now, let's apply what we've learnt and make the webstie our own!
 
-8. Now let's add another section title above the "card" html element (This is a react component, but we'll cover this in a later session). This section title could be something like "Stays" <details closed><summary>Hint</summary><br>`<h3>Stays</h3>`</details>
+    Update the colors of the site to make it your own. See what components you can change the color of.
+    
+    Add the remaining stays with titles, pictures and a description.
+    
+    Add any additional marketing content to the webstie using `<div>` and styling it as we've done previously, or you can update the existing sections on climate and history
+    
+    Have a look at all the CSS properties we can use https://www.w3schools.com/cssref/. You could try updating the background of the website.
+    
 
-9. Finally, let's add a footer. Try thinking how you can create a "division" at the bottom page. Set the colour of the footer to something different to the main page so we can see this division! Add some content to the footer if you feel like it. <details closed><summary>Hint</summary><br>HTML: `<div className="footer"></div>`
+### Exercise 2: Javascript :computer: [30 minutes]
 
-   CSS: `.footer{background-colour: #3662d8; width: 100%;height: 100px}`</details>
+1. Let's add a button that can change the color of the header
 
-### Exercise 2: Javascript :computer:
+    First add a Javascript function that will update the header colour. Paste this into your JS section
+    
+    ```
+    function updateHeaderColor() {
+        var x = document.getElementById("header");
+        x.style.background-color = "#ff0000";
+    }
+    ```
+    
+    Next, let's add a button to call this function. Add this to somewhere in the html section.
+    
+    ```
+    <button type="button" onclick="updateHeaderColor()">Click me!</button>
+    ```
+    
+    
+2. Let's add a clock to the footer
 
-1. We're going to create a small welcome message to the page that will greet the user and remember if a user has already visited the page! This will be quite a long exercise...
+    We're going to write a function that can update an element with the current time
+    
+    ```
+    function startTime() {
+        var today=new Date();
+        var h=today.getHours();
+        var m=today.getMinutes();
+        var s=today.getSeconds();
+        document.getElementById('clock').innerHTML=h+":"+m+":"+s;
+    }
+    ```
+    
+    Now let's add an element to the footer with the `clock` ID inside the footer.
+    
+    ```
+    <div id="clock"></div>
+    ```
+    
+    Finally, let's have the Javascript function run when the webpage is loaded. Update the top most div to call the function when it's loaded.
+    
+    ```
+    <div onload="startTime()">
+    ```
 
-2. Let's start by adding a button for updating the user's name. Add a button to the page <details closed><summary>Hint</summary><br>`<button>Change user</button>`</details>
+#### Congratulations
 
-3. Now let's add a simple javacript function with no parameters that outputs a message to the console, you can use console.log. The function has to go in App function before the return. <details closed><summary>Hint</summary><br>`function setUserName() { console.log("You clicked the button!"); }`</details>
+You've reached the end of the exercises. Now's the time to go back and update any areas you didn't get time to do earlier and add any additional content you think would encouragage a traveller to visit (Potentially a video?)
 
-4. Add an onClick event to the button created earlier that calls the function. <details closed><summary>Hint</summary><br> `<button onclick="setUserName()">Click me</button> `</details>
+If you want to save your work, you can make a free account.
 
-5. Open your site in the browser and right click -> inspect. Open the console tab on the right and click the button. You should see the output of your function! :grin:
-
-6. Let's add a HTML tag for holding the welcome message, Something simple like a `<p>` tag. Add an id attribute to the element <details closed><summary>Hint</summary><br> `<p id="welcomeMessage"></p>`</details>
-
-7. Time to update the function to set the username to actually do something useful! Update the content of the function to the following. Try to understand what each line could be doing...
-
-```
-
-    let welcomeMessage = document.getElementById("welcomeMessage");
-    let username = prompt("Please enter your name.");
-    localStorage.setItem("name", username);
-    welcomeMessage.textContent = "Welcome, " + username;
-
-```
-
-8. Try running the site and checking it works, when we click the button we should be asked for a username, which sets the welcome message. Try refreshing the site, what happens?
-
-9. Finally, we need want a function to check the local storage after loading the page so that it "remembers" the username we set. To mak this easier we're going to use a tiny bit of React. The `useEffect` hook allows us to do side effects when things happen on the page, such as the page content being rendered. Add the following to the App function in App.js:
-
-```
-
-useEffect(() => {
-let welcomeMessage = document.getElementById("welcomeMessage");
-if (!localStorage.getItem("name")) {
-setUserName();
-} else {
-let storedName = localStorage.getItem("name");
-welcomeMessage.textContent = "Welcome, " + storedName;
-}
-});
-
-```
-
-Run the site, set the username again and click refresh. You should see the username is still set!
-
-### Exercise 3: React :rocket:
-
-1. Now let's work on our dream stays components. The cards are created as React component, which you can see in /components/Card.js. We're exporitng a "Card" component which can be used on other pages (such as the homepage). Take a look at the code and see if you can find out where we're pulling the Card information from such as the description...<details closed><summary>Hint</summary><br>There is a `getStays` function being called in App.js, which returns our list of objects from data.js</details>
-
-2. Let's update our stays. Update each stay's description, image, name etc. to be something unique related to your destination, be as creative as you like!
-
-3. The travel agent has informed us they want us to advertise the avg price of the stays too. For this we will need to use the Pricing-Server we worked on earlier. You should look at the `Card.js`, `pricing-server.js`, ask one of us for hints
-
-4. Now we want to display this price on the card component. Go to App.js and pass our new price attribute to the Card component.<details closed><summary>Hint</summary><br>`<Card id={stay.id} name={stay.name} description={stay.description} img={stay.img} price={stay.price} />`</details>
-
-5. Next, we want to use this price attibute in the Card component, so head over to Card.js and add a new HTML element that could display the price. Remember it's just a text field. Feel free to add some CSS to this it to look a bit nicer.<details closed><summary>Hint</summary><br>`<p className="card-price"> {props.price} </p>`</details>
-
-6. The travel agent wants each Stay page to feature a promotational video. We can use the rich ecosystem of react to embded a video super easily. For this exercise we will be using https://github.com/CookPete/react-player. First off, install the package by running `npm install react-player`
-
-7. Next, import the conmponent from the package by adding `import ReactPlayer from "react-player";` to the top of Stay.js (With the other imports)
-
-8. Now add the component to the page using `<ReactPlayer url="https://www.youtube.com/watch?v=ysz5S6PUM-U" />`. You should see the video is now avaiable on the page! :grin:
-
-9. We want a different video for each stay, so we're going to to need to do the same steps we did earlier to display the price, but this time we need to update stay.js rather than the homepage and card component.<details closed><summary>Hint</summary><br>`{ id: "theritz", name: "The Ritz", img: "https://media.cntraveler.com/photos/5f6198aa987090832029b181/16:9/w_2560%2Cc_limit/ritz-london-exterior.jpg", description: "We are London’s most iconic hotel. A five star haven on Piccadilly that is famous the world over for its historic elegance, impeccable service, impressive suites, and legendary Afternoon Tea.", nearby: ["London eye", "Buckingham Palace", "Tower Bridge"], videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" }` && `<ReactPlayer url={stay.videoUrl} />`</details>
-
-10. Find some promotational video for your stay or location for each stay and display it on the stay page!
-
-### Lesson 4: Final additions and deployment :four:
-
-1. Congratualions on making it to the end! :tada:. This final sesison is for you to make any last minute changes or fixes; Add any content you like or play around with some more of the technologies we've learnt by creating the website.
-
-## Student sites
-
-TODO: Add links to student sites here!
-
-```
-links go here
-```
+You can search more example codepends here https://codepen.io/search/pens?q= 
