@@ -10,19 +10,6 @@ Remember to use the knowledge shared in the slide deck to complete these activit
 
 There are also a million ways to design and implement a website, we're not worried about using best practices here, let's just get it working!
 
-#### File Structure
-
-We only need to be concerned with the src folder for the exercises!
-
-- src
-  - components/ (This is for our React components)
-  - routes/ (This has the pages for our dream stays)
-  - App.css (This has the styling for the homepage, so if you want to style something on the homepage, add it here!)
-  - App.js (This has the HTML for the homepage, so if you want to add something to the homepage, add it here!)
-  - data.js (This is where we store information about our dream stays)
-  - index.css (We can ignore this for now)
-  - index.js (We can ignore this for now)
-
 ### Exercise 0: Picking a location [15 minutes]
 
 :information_source: Info for workshop lead, if codesandbox is not working, we may have to use codepen and use the html and css in the /alt directory. Most of the HTML and CSS exercises will still work but they cannot save their work without creating an account. 
