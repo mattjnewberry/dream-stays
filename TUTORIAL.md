@@ -41,7 +41,8 @@ We only need to be concerned with the src folder for the exercises!
       1. Go to https://codepen.io/
       2. Click on `Start Coding` in the top left
       3. Copy the contents from alt/index.html to the html section in codepen
-      4. Copy the contents from styles.css to the css section of codepen 
+      4. Whilst you're doing this, pay attention to how adding the css changes the site. 
+      5. Copy the contents from styles.css to the css section of codepen 
 
 2. Next, we need to update your website title to include your new location. Update the `<h1>` tag in the html and change the title to include your location.
 
@@ -53,16 +54,20 @@ We only need to be concerned with the src folder for the exercises!
 
 2. Now let's add this to our site underneath our location title. Try making the slogan italic and bold so it stands out.
 
-    Add the following to your html under the title. Play around with placing it on different areas of the page
+    Add the following to your html under the header section. Play around with placing it on different areas of the page
 
     ```
-    <p className=app-slogan>my slogan</p>`
+    <p class=app-slogan>my slogan</p>
     ```
 
     Then we want to style this element, so add the following to the css
 
     ```
-    .location-slogan{font-weight: bold; font-style: italic;}
+    .app-slogan {
+        font-size: 30px;
+        font-weight: bold; 
+        font-style: italic;
+    }
     ```
     
 3. The travel agent has asked that the slogan stands out on the page, and to do this he wants to change the color.
@@ -70,8 +75,14 @@ We only need to be concerned with the src folder for the exercises!
     Go to https://www.w3schools.com/colors/colors_picker.asp and select pick a color for your slogan. Copy the 7 digit code, it should look something like `#ffffff`. THis is a hex code.
     
     Update the css element we just created to include your hex code.
-    ```
-    .location-slogan{font-weight: bold; font-style: italic;, color: <INSERT_COLOR>}
+   
+      ```
+    .app-slogan {
+        font-size: 30px;
+        font-weight: bold; 
+        font-style: italic;
+        color: <INSERT COLOR HERE>
+    }
     ```
 
 4. Next, we need to update the stays to be relevant to your location. We'll do the first card together.
@@ -107,6 +118,7 @@ We only need to be concerned with the src folder for the exercises!
     ```
     .footer {
         width: 100%;
+        height: 100px;
         color: #f8f5f4;
         background-color: #3662d8;
         display: flex;
@@ -159,6 +171,7 @@ We only need to be concerned with the src folder for the exercises!
         var m=today.getMinutes();
         var s=today.getSeconds();
         document.getElementById('clock').innerHTML=h+":"+m+":"+s;
+        t=setTimeout(function(){startTime()},500);
     }
     ```
     
@@ -168,11 +181,37 @@ We only need to be concerned with the src folder for the exercises!
     <div id="clock"></div>
     ```
     
-    Finally, let's have the Javascript function run when the webpage is loaded. Update the top most div to call the function when it's loaded.
+    Finally, let's have the Javascript function run when the webpage is loaded. Wrap the entire html in body tags to call the function when it's loaded. Paste at the top
     
     ```
-    <div onload="startTime()">
+    <body onload="startTime()">
     ```
+    
+    and the closing tag at the bottom
+    
+    ```
+    </body>
+    ```
+    
+    If you want the clock to be more readable, you can add a function that formats the variables.
+    
+    ```
+    function checkTime(i) {
+        if (i<10) {
+            i="0" + i;
+        }
+        return i;
+    }
+    ```
+    
+    And update the variables in your clock display to use this formatting function. Add these to your startTime function.
+    
+    ```
+        m=checkTime(m);
+        s=checkTime(s);
+    ```
+    
+    
 
 #### Congratulations
 
@@ -180,4 +219,4 @@ You've reached the end of the exercises. Now's the time to go back and update an
 
 If you want to save your work, you can make a free account.
 
-You can search more example codepends here https://codepen.io/search/pens?q= 
+You can search more example codepens here https://codepen.io/search/pens?q= 
