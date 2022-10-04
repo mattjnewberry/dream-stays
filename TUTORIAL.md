@@ -51,7 +51,7 @@ There are also a million ways to design and implement a website, we're not worri
     
 3. The travel agent has asked that the slogan stands out on the page, and to do this he wants to change the color.
 
-    Go to https://www.w3schools.com/colors/colors_picker.asp and select pick a color for your slogan. Copy the 7 digit code, it should look something like `#ffffff`. THis is a hex code.
+    Go to https://www.w3schools.com/colors/colors_picker.asp and select pick a color for your slogan. Copy the 7 digit code, it should look something like `#ffffff`. This is a hex code.
     
     Update the css element we just created to include your hex code.
    
