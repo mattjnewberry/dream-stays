@@ -128,7 +128,7 @@ There are also a million ways to design and implement a website, we're not worri
     ```
     function updateHeaderColor() {
         var x = document.getElementById("header");
-        x.style.background-color = "#ff0000";
+        x.style.backgroundColor = "#ff0000";
     }
     ```
     
