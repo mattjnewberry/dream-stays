@@ -17,19 +17,11 @@ There are also a million ways to design and implement a website, we're not worri
 1. First, pick a location. This can be any location you like. Perhaps there's a place you've always wanted to visit or just random town from google maps!
 
 2. Next, we want to actually start working on our website! 
-    1. For codesandbox do:
-      1. Go to http://codesandbox.io/
-      2. Click `Start coding for free` at the bottom of the page
-      3. Click `Import project` on the left
-      4. Copy and paste `https://github.com/mattjnewberry/dream-stays-2022` into the Github Repository Url Box
-      5. Click `Import to projects`
-      6. This should open up a new window with the code and the website running. (Don't close this window
-    2. For codepen do:
+    1. For codepen do:
       1. Go to https://codepen.io/
       2. Click on `Start Coding` in the top left
       3. Copy the contents from alt/index.html to the html section in codepen
-      4. Whilst you're doing this, pay attention to how adding the css changes the site. 
-      5. Copy the contents from styles.css to the css section of codepen 
+      5. Copy the contents from alt/styles.css to the css section of codepen, Whilst you're doing this, pay attention to how adding the css changes the site. 
 
 2. Next, we need to update your website title to include your new location. Update the `<h1>` tag in the html and change the title to include your location.
 
