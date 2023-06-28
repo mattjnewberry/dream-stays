@@ -72,7 +72,7 @@ There are also a million ways to design and implement a website, we're not worri
 
 4. Next, we need to update the stays to be relevant to your location. We'll do the first card together.
 
-    Think of a stay you'd like to advertise that would encourage travellers to visit your destination. 
+    Think of a stay you'd like to advertise that would encourage travellers to visit your destination. Be imaginative.
     
     Go to https://unsplash.com/ and find a relevant picture for your stay
     
@@ -124,7 +124,30 @@ There are also a million ways to design and implement a website, we're not worri
 
 7. You've probably been strugglging to get back to the home page from other pages of the website. Let's add a home button to make our life easier!
 
-    TODO Add home button
+    Have a look in `Card.js` and see how the `View More` button works...
+
+    We want to copy this functionality.
+
+    First paste the following in between the `<header></header>` tags in `stays.js`
+
+    ```
+    <Link to="/">
+        <button className="nav-button">Home</button>
+     </Link>
+    ```
+
+    You should see an error in your code. `'Link' is not defined`, what does this mean?
+
+    The `<link>` component doesn't exist in our application. We haven't defined it and our code doesn't know where to get it from! 
+
+    We need to import this `<Link>` component. Add 
+
+    `import { Link } from "react-router-dom";` to `stays.js`
+
+    This is importing the `<Link>` component from the `react-router-dom` package. We'll look at react packages a bit later on.
+
+    Now it should work. Test it out!
+
     
 8. Now, let's apply what we've learnt and make the webstie our own!
 
