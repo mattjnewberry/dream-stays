@@ -9,6 +9,9 @@ export default function App() {
   return (
     <div className="app">
       <header className="app-header">
+        <p className="disclaimer">
+          This is a fictional website for educational purposes
+        </p>
         <h1>Dream Stays: London</h1>
       </header>
       <br />
