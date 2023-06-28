@@ -1,4 +1,4 @@
-# dream-stays-2022 :hotel::airplane:
+# dream-stays :hotel::airplane:
 
 This is a starter repository for building a dream stays website.
 
