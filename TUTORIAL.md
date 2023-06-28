@@ -1,10 +1,10 @@
 ### Introduction :wave:
 
-A local travel agent is building a websites to show off a selection of hotels in their area. They want their website to encouragage people to visit a destnation and stay at one of the travel agents "dream stays"
+A local travel agent is building a websites to show off a selection of hotels in their area. They want their website to encouragage people to visit a destination and stay at one of the travel agent managed "dream stays"
 
 For example, your destination may be London and your dream stays may be The London Grand Hotel, Camping in Crystal Palace and a Thames canal boat.
 
-Remember the local travle agent really wants to market the location and "Dream stays" to our customers so they'll book a holiday, so try to encourage people to visit. Perhaps the weather is exceptionally nice, or there is a range of local wildlife to see. Think about the type of content that would persuade YOU to travel to a specific destination. BE CREATIVE! We want a website that stands out, not a boring website.
+Remember the local travel agent really wants to market the location and "Dream stays" to our customers so they'll book a holiday so try to encourage people to visit. Perhaps the weather is exceptionally nice, or there is a range of local wildlife to see. Think about the type of content that would persuade YOU to travel to a specific destination. BE CREATIVE! We want a website that stands out, not a boring website.
 
 Remember to use the knowledge shared in the slide deck to complete these activities and ask the assistents for help. We will walk through the exercises together but you'll have time to after each to go back through and update the content.
 
