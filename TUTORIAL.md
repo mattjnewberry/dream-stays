@@ -12,8 +12,6 @@ There are also a million ways to design and implement a website, we're not worri
 
 ### Exercise 0: Picking a location [15 minutes]
 
-:information_source: Info for workshop lead, if codesandbox is not working, we may have to use codepen and use the html and css in the /alt directory. Most of the HTML and CSS exercises will still work but they cannot save their work without creating an account. 
-
 1. First, pick a location. This can be any location you like. Perhaps there's a place you've always wanted to visit or just random town from google maps!
 
 2. Next, we want to actually start working on our website! 
