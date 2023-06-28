@@ -2,7 +2,7 @@
 
 This is a starter repository for building a dream stays website.
 
-For the tutorial head over to [TUTORIAL.md](TUTORIAL.md)
+For a short (~2 hours) tutorial head over to [TUTORIAL.md](TUTORIAL.md). For a longer tutorial (~6 hours) head over to [TUTORIAL_EXTENDED.md](TUTORIAL_EXTENDED.md).
 
 ## Pre-requisite
 
