@@ -160,78 +160,199 @@ There are also a million ways to design and implement a website, we're not worri
     Have a look at all the CSS properties we can use https://www.w3schools.com/cssref/. You could try updating the background of the website.
     
 
-### Exercise 2: Javascript :computer: [30 minutes]
+### Exercise 2: Javascript :computer: [1 hour]
 
 1. Let's add a button that can change the color of the header
 
-    First add a Javascript function that will update the header colour. Paste this into your JS section
+    First add a varible to hold our default background color in `App.js`, just under where we define our other variable
     
     ```
-    function updateHeaderColor() {
-        var x = document.getElementById("header");
-        x.style.backgroundColor = "#ff0000";
-    }
+    const egBlue = "#3662d8";
     ```
-    
-    Next, let's add a button to call this function. Add this to somewhere in the html section.
+
+    Now we need to add state so we can update something when we click the button. This is going to use a little bit of React logic.
+
+    ```
+     const [bgColor, setBgColor] = useState(egBlue);
+    ```
+
+    Next, we need to add the function to actually update this state. Add this function to `App.js`. Feel free to pick whatever colour you like. If you do, make sure you rename the variable so others know what color it is!.
+
+
+    ```
+    const changeColor = () => {
+        let purple = "#A020F0";
+        setBgColor(purple);
+    };
+    ```
+
+    We need to update our header to use this new state. Update the `<header>` tag to have the following attribute 
+   
+    ```
+    style={{ background: bgColor }}
+    ```
+
+    Finally, let's add a button to set this state. Add this to somewhere in the html section.
     
     ```
-    <button type="button" onclick="updateHeaderColor()">Click me!</button>
+    <button type="button" onClick={changeColor}>
+        Click me!
+    </button>
     ```
     
     
 2. Let's add a clock to the footer
 
-    We're going to write a function that can update an element with the current time
+    First, let's define a state again for our clock. Paste the following code into `App.js` before the return statement. We're using the built in functions to get the current time!
+
+    ```
+    const [time, setTime] = useState({
+        minutes: new Date().getMinutes(),
+        hours: new Date().getHours(),
+        seconds: new Date().getSeconds()
+    });
+    ```
+    
+    Next, we want to some code to run after our website had loaded every second to update the time. The following code
     
     ```
-    function startTime() {
-        var today=new Date();
-        var h=today.getHours();
-        var m=today.getMinutes();
-        var s=today.getSeconds();
-        document.getElementById('clock').innerHTML=h+":"+m+":"+s;
-        t=setTimeout(function(){startTime()},500);
+      useEffect(() => {
+        const intervalId = setInterval(() => {
+            const date = new Date();
+            setTime({
+                minutes: date.getMinutes(),
+                hours: date.getHours(),
+                seconds: date.getSeconds()
+            });
+        }, 1000);
+
+        return () => clearInterval(intervalId);
+    }, []);
+    ```
+
+    `useEffect()` is a React hook that will run after the page has loaded. We then define some code to run at a specified interval, in this case, every 1 second. Notice how we're updating our time state that we set just a moment ago.
+
+    There should be an error saying `useEffect` is undefined... Take a look at how we're importing `useState` at the tope of the file, can you try importing `useEffect`?
+
+    Let's display the time state. Paste the following anyewhere in the html in `App.js`
+
+    ```
+    <div className="clock">
+        <span>{time.hours}:</span>
+        <span>{time.minutes}:</span>
+        <span>{time.seconds}</span>
+        <span>{time.hours >= 12 ? " PM" : " AM"}</span>
+      </div>
+    ```
+
+    Wait for the clock to a single digit second...it looks a little weird, right? Let's write a function to prettify our clock digits. Add the following function to before the return function in `App.js` 
+    
+    ```
+        const convertToTwoDigit = (number) => {
+            return number.toLocaleString("en-US", {
+            minimumIntegerDigits: 2
+            });
+        };
+    ```
+
+    Can you figure how to now use this function in our html? It takes a number of a paramter and returns the formatted number. We're currently displaying the numbres with `<span>{time.hours}:</span>`.
+    
+    
+### Exercise 3: React components :earth_africa: [1 hour]
+
+1. We've used a number of react featuers such as state and hooks. Another key benifit of react is using Components. Components are reusable bits of code. Let's create a NearbyAttractions component
+
+    First we need to create `NearbyAttractions.js` and `NearbyAttractions.css` files.
+
+    Once we have these files let's create a basic functional component with the following code
+
+    ```
+    function Attractions() {
+        return <div className="Attractions"></div>;
     }
+
+    export default Attractions;
     ```
-    
-    Now let's add an element to the footer with the `clock` ID inside the footer.
-    
+
+    We want this component to show a table with a list of nearby attractions. First let's add a paramter to this component (these are called our props). Update the function to include a parameter.
+
     ```
-    <div id="clock"></div>
+    function Attractions(attractionData)
     ```
-    
-    Finally, let's have the Javascript function run when the webpage is loaded. Wrap the entire html in body tags to call the function when it's loaded. Paste at the top
-    
+
+    Now we can use this variable to display the data which we'll pass in later. Add a basic table that is going to display our data in a table
+
     ```
-    <body onload="startTime()">
+      <table>
+        <thead>
+          <tr>
+            <th>Attraction</th>
+            <th>Distance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{attractionData.attractions[0].name}</td>
+            <td>{attractionData..attractions[0].distance}</td>
+          </tr>
+        </tbody>
+      </table>
     ```
-    
-    and the closing tag at the bottom
-    
+
+    We need to use this component somwehere. Let's add it to our `stays.js` page. You'll need to import your custom component first, take a look at how `App.js` is importing our `Card` component and try and import the `Attractions` component into `stays.js`
+
+    Once you've imported the componet, try adding it to `stays.js` somewhere in the html. Remember to include a closing tag!
+
+    It looks a little empty...It's because we're not passing any data to the component! Let's pass some data.
+
+    First, let's update the data in `data.js`. We're currently defining an array of nearby locations, but we want to make this an array of objects for each of our attractoins. For example
+
     ```
-    </body>
+    attractions: [
+      {
+        name: "London eye",
+        distance: 12
+      },
+      {
+        name: "Buckingham Palace",
+        distance: 10
+      },
+      {
+        name: "Tower Bridge",
+        distance: 3
+      }
+    ]
     ```
-    
-    If you want the clock to be more readable, you can add a function that formats the variables.
-    
+
+    Update each of the stays neary fields in `data.js` to use a create an array of objects.
+
+    Now add the Attractions component to `stays.js` by adding
+
     ```
-    function checkTime(i) {
-        if (i<10) {
-            i="0" + i;
-        }
-        return i;
-    }
+    <Attractions attractions={stay.attractions} />
     ```
-    
-    And update the variables in your clock display to use this formatting function. Add these to your startTime function.
-    
+
+    Checkout one of the stays pages. Hmm, it's only showing the first attraction. Why is this?
+
+    We need to loop over the `attractionsData.attraction` and display a new row in the table for each one!
+
+    Take a look at how we're doing this when displaying the Cards list in `App.js`. Can you try iterating over the map and the values in each row? You can use this to get you started
+
     ```
-        m=checkTime(m);
-        s=checkTime(s);
+        {attractionsData.attractions.map((attraction) => {
+            return (
+                <tr>
+                <td>{attraction.name}</td>
+                <td>ADD THE DISTANCE ROW<td>
+                </tr>
+            );
+        })}
     ```
-    
-    
+
+2. The travel agent has provided some feedback and said they want more content on the website to engage the customer. Let's add a video to each stay page.
+
+<TODO Add react video demo pulling from youtube>
+
 
 #### Congratulations
 
