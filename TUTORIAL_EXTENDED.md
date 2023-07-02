@@ -351,13 +351,26 @@ There are also a million ways to design and implement a website, we're not worri
 
 2. The travel agent has provided some feedback and said they want more content on the website to engage the customer. Let's add a video to each stay page.
 
-<TODO Add react video demo pulling from youtube>
+First, let's import `ReactPlayer` from `react-player` in `stays.js`. Just like we can import and re-use our componetns, we can import and re-use other peoples components!
 
+```
+import ReactPlayer from "react-player";
+```
+
+You should see an error in your website, it's telling us to resolve the dependecy. We need to tell the IDE to install the `react-player` package. Click `Resolve dependencies`. Go to `package.json`, you'll see the package we just installed!
+
+Now we can add the `ReactPlayer` component to the page
+
+```
+<ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' /
+```
+
+You should see the video pop up. But there's a problem, it's using the same URL for each stay page. We want a different video for each stay. 
+
+How can we pass in the URL? Take a look at how we're pasing in the `stay.description`, can you do the same for the video url?
 
 #### Congratulations
 
-You've reached the end of the exercises. Now's the time to go back and update any areas you didn't get time to do earlier and add any additional content you think would encouragage a traveller to visit (Potentially a video?)
+You've reached the end of the exercises. Now's the time to go back and update any areas you didn't get time to do earlier and add any additional content you think would encouragage a traveller to visit.
 
-If you want to save your work, you can make a free account.
-
-You can search more example codepens here https://codepen.io/search/pens?q= 
+If there's something you want to add and need help, ask one of the volunteers!
