@@ -8,7 +8,7 @@ Remember the local travel agent really wants to market the location and "Dream s
 
 Remember to use the knowledge shared in the slide deck to complete these activities and ask the assistents for help. We will walk through the exercises together but you'll have time to after each to go back through and update the content.
 
-There are also a million ways to design and implement a website, we're not worried about using best practices here, let's just get it working!
+There are also a million ways to design and implement a website so we're not worried about using best practices here; let's just get it working!
 
 ### Exercise 0: Getting started [30 minutes]
 
@@ -19,7 +19,7 @@ There are also a million ways to design and implement a website, we're not worri
     2. Click on `Try for free` in the top right
     3. Click on `Import repository` and click `Sign in with Github`
     4. Click on `Import repository` again and paste `https://github.com/mattjnewberry/dream-stays/` and click `Import`
-    5. This will create a Github branch for your work. This is where we're going to do all of our coding.
+    5. This will create a Github branch for your work. This is where we're going to do all of our coding. (If it doesn't create you a branch, you can create one using the drop down menu at the top)
 
 3. Then, pick a location. This can be any location you like. Perhaps there's a place you've always wanted to visit or just random town from google maps! Pick somewhere you'll find interesting reseraching and building a website for.
 
@@ -29,7 +29,7 @@ There are also a million ways to design and implement a website, we're not worri
 
 6. Now we need to make sure we can save out change to Github, this is called a "Commit". It's important to commit your work regulary to avoid losing any work! Click on the icon in the top left with a purple dot. This will list the "Uncommited Changes", make sure all files you want to commit are ticked and click `Commit and Push`. 
 
-7. Let's view our branch in Github to make sure it's all there. In the top center click the drop down and click `Open branch in Github`, This should open your branch and you should be able to see the most recent commit!
+7. Let's view our branch in Github to make sure it's all there. In the top center click the drop down and click `Open branch in Github`. This should open your branch and you should be able to see the most recent commit!
 
 3. Great. Now let's start adding content to our website using html and css!
 
@@ -42,7 +42,7 @@ There are also a million ways to design and implement a website, we're not worri
     Add the following to your html under the your `h1` tag in `App.js`. Play around with placing it on different areas of the page and see what happens.
 
     ```
-    <p class=app-slogan>my slogan</p>
+    <p className=app-slogan>my slogan</p>
     ```
 
     Then we want to style this element, so add the following to the `App.css`
@@ -82,7 +82,7 @@ There are also a million ways to design and implement a website, we're not worri
     
     e.g 
     ```
-    <img class="card-header-img" alt="alt2" src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"/>
+    <img className="card-header-img" alt="alt2" src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80"/>
     ```
 
     Go to `data.js` and update the `img` key value to use your new URL. Refresh the page to ensure the new data is being used correctly!
@@ -93,12 +93,12 @@ There are also a million ways to design and implement a website, we're not worri
 
     Click on `View More` in the built in browser for one of the cards. Notice how it takes you to a new page.
 
-    Take a look at the URL (That's the address at the top). You should notice your `id`. Now go back and change your `id` in `data.js` again. Go back to the root url by deleteing the `#` and everything after. Click on the `View More` for the same stay and notice how the URL has changed automatically!
+    Take a look at the URL (That's the address at the top). You should notice your `id` (if you don't, try copying the URL and opening it in a seperate browser). Now go back and change your `id` in `data.js` again. Go back to the root url by deleteing the `#` and everything after. Click on the `View More` for the same stay and notice how the URL has changed automatically!
 
     
 6. Finally, let's add a footer to the page with the name of the author and the year
 
-    Add a div to the bottom of the page just below the last closing `</div` tag, with
+    Add a div to the bottom of the page just below the last closing `</div>` tag, with
     
     ```
     	<div className="footer">
@@ -120,6 +120,8 @@ There are also a million ways to design and implement a website, we're not worri
         font-size: calc(10px + 2vmin);
     }
     ```
+
+    Now add some html tags to include text about the author and the year the website was made (Hint: <p> tags work well for this!)
 
 
 7. You've probably been strugglging to get back to the home page from other pages of the website. Let's add a home button to make our life easier!
@@ -155,7 +157,7 @@ There are also a million ways to design and implement a website, we're not worri
     
     Add the remaining stays with titles, pictures and a description.
     
-    Add any additional marketing content to the website using `<div>` and styling it as we've done previously, or you can update the existing sections on climate and history
+    Add any additional marketing content to the website using `<div>` and styling it as we've done previously, or you can update the existing sections on climate and history. Remember, be creative!
     
     Have a look at all the CSS properties we can use https://www.w3schools.com/cssref/. You could try updating the background of the website.
     
@@ -293,7 +295,7 @@ There are also a million ways to design and implement a website, we're not worri
         <tbody>
           <tr>
             <td>{attractionData.attractions[0].name}</td>
-            <td>{attractionData..attractions[0].distance}</td>
+            <td>{attractionData.attractions[0].distance}</td>
           </tr>
         </tbody>
       </table>
@@ -301,11 +303,11 @@ There are also a million ways to design and implement a website, we're not worri
 
     We need to use this component somwehere. Let's add it to our `stays.js` page. You'll need to import your custom component first, take a look at how `App.js` is importing our `Card` component and try and import the `Attractions` component into `stays.js`
 
-    Once you've imported the componet, try adding it to `stays.js` somewhere in the html. Remember to include a closing tag!
+    Once you've imported the component, try adding it to `stays.js` somewhere in the html. Remember to include a closing tag!
 
     It looks a little empty...It's because we're not passing any data to the component! Let's pass some data.
 
-    First, let's update the data in `data.js`. We're currently defining an array of nearby locations, but we want to make this an array of objects for each of our attractoins. For example
+    First, let's update the data in `data.js`. We're currently defining an array of nearby locations, but we want to make this an array of objects for each of our attractions. For example
 
     ```
     attractions: [
@@ -324,7 +326,7 @@ There are also a million ways to design and implement a website, we're not worri
     ]
     ```
 
-    Update each of the stays neary fields in `data.js` to use a create an array of objects.
+    Update each of the stays nearby fields in `data.js` to use a create an array of objects.
 
     Now add the Attractions component to `stays.js` by adding
 
@@ -334,7 +336,7 @@ There are also a million ways to design and implement a website, we're not worri
 
     Checkout one of the stays pages. Hmm, it's only showing the first attraction. Why is this?
 
-    We need to loop over the `attractionsData.attraction` and display a new row in the table for each one!
+    We need to loop over the `attractionsData.attractions` and display a new row in the table for each one!
 
     Take a look at how we're doing this when displaying the Cards list in `App.js`. Can you try iterating over the map and the values in each row? You can use this to get you started
 
