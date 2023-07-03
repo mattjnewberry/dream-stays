@@ -12,7 +12,7 @@ There are also a million ways to design and implement a website so we're not wor
 
 ### Exercise 0: Getting started [30 minutes]
 
-1. First, we need to create a Github.com account. This is a free account (you may already have one from an earlier session)
+1. First, we need to create a Github.com account. This is a free account (you may already have one from an earlier session). Once this is done, let a volunteer know and we can add you to the repository.
 
 2. Next, we want to actually start working on our website! 
     1. Go to https://codesandbox.io/
