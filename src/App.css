@@ -48,3 +48,16 @@
   font-size: 14px;
   color: #cc3300;
 }
+
+.footer {
+    width: 100%;
+    height: 100px;
+    color: #f8f5f4;
+    background-color: #3662d8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+}
+  
