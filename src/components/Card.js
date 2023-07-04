@@ -22,4 +22,5 @@ function Card(cardData) {
     );
 }
 
+
 export default Card;

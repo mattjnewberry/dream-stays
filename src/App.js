@@ -13,6 +13,7 @@ export default function App() {
           This is a fictional website for educational purposes
         </p>
         <h1>Dream Stays: Dubai</h1>
+        <p className="app-slogan"> "Dazzling Dubai: Where Dreams Dance with Delight!"</p>
       </header>
       <br />
       <div className="container">
@@ -44,6 +45,10 @@ export default function App() {
           victorian architecture.
         </p>
       </div>
-    </div>
+      <div classname="footer">
+        <p> Author: Yacine, 2023 </p>
+      </div>
+    const egBlue = "#3662d8" ;
+  </div>
   );
 }
