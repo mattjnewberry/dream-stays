@@ -9,10 +9,9 @@ export default function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <p className="disclaimer">
-          This is a fictional website for educational purposes
-        </p>
-        <h1>Dream Stays: Iceland</h1>
+        <p className="slogan">
+       "Going to Sicily is better than going to the moon" - William Shakespeare</p>
+        <h1>Dream Stays: Sicily</h1>
       </header>
       <br />
       <div className="container">
@@ -28,6 +27,8 @@ export default function App() {
           );
         })}
       </div>
+      <div img className="card-header-img" alt="alt2" src="https://media.istockphoto.com/id/141215014/photo/etna-volcano.jpg?s=1024x1024&w=is&k=20&c=1nj-aDnyxMgiVe9kGdwuG6M9OaXiYwlmxMURBe81VMk="/>
+  
       <hr className="app-divider" />
       <div>
         <h2 className="app-subheader">Climate</h2>
@@ -40,8 +41,7 @@ export default function App() {
       <div>
         <h2 className="app-subheader">History</h2>
         <p>
-          London has a rich history dating back to 43 CE. Explore edwardian and
-          victorian architecture.
+          Sicily has a rich history dating back to 1071, when it was first established as the County of Sicily, which was due to Norman Conquest of Italy.
         </p>
       </div>
     </div>
