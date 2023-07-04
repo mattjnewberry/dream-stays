@@ -12,7 +12,7 @@ export default function App() {
         <p className="disclaimer">
           This is a fictional website for educational purposes
         </p>
-        <h1>Dream Stays: London</h1>
+        <h1>Dream Stays: Norway </h1>
       </header>
       <br />
       <div className="container">
