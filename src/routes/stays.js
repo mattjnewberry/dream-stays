@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import "./stays.css";
 import { getStay } from "../data";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Stay() {
   let params = useParams();
@@ -13,6 +14,9 @@ export default function Stay() {
           This is a fictional website for educational purposes
         </p>
         <h1>Dream Stays</h1>
+        <Link to="/">
+          <button className="nav-button">Home</button>
+        </Link>
       </header>
       <img className="stay-img" alt={stay.name} src={stay.img} />
       <h2>{stay.name}</h2>
