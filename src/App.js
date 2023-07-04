@@ -13,7 +13,8 @@ export default function App() {
           This is a fictional website for educational purposes
         </p>
         <h1>Dream Stays: Norway </h1>
-      </header>
+        <p className="app-slogan">Let The Aurora Amaze You!</p>!
+      </header> Have A Dream Life
       <br />
       <div className="container">
         {stays.map((stay) => {

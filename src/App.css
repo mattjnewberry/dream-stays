@@ -5,15 +5,20 @@
 
 .app-header {
   width: 100%;
-  color: #f8f5f4;
-  background-color: #3662d8;
+  color: #8adda0;
+  background-color: #f3814c;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(5px + 2vmin);
 }
-
+.app-slogan {
+    font-size: 30px;
+    font-weight: bold; 
+    font-style: italic;
+    color: #8adda0
+}
 .app-subheader {
   width: 100%;
   display: flex;
