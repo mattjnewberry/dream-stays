@@ -32,8 +32,8 @@ export default function App() {
       <div>
         <h2 className="app-subheader">Climate</h2>
         <p>
-          London has some of the best weather in the world, with average highs
-          of 15 degress celcius
+          Sicily has some of the best weather in the world, with average highs
+          of 150 degress celcius
         </p>
       </div>
       <hr className="app-divider" />
