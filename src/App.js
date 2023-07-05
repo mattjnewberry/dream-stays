@@ -1,11 +1,40 @@
 import "./App.css";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Card from "./components/Card";
 import { getStays } from "./data";
 
 // Main app
+
 export default function App() {
   let stays = getStays();
+  const egBlue = "#3662d8";
+  const [bgColor, setBgColor] = useState(egBlue);
+  const changeColor = () => {
+    let purple = "#A020F0";
+    setBgColor(purple);
+  };
+  const [time, setTime] = useState({
+    minutes: new Date().getMinutes(),
+    hours: new Date().getHours(),
+    seconds: new Date().getSeconds(),
+  });
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const date = new Date();
+      setTime({
+        minutes: date.getMinutes(),
+        hours: date.getHours(),
+        seconds: date.getSeconds(),
+      });
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+  const convertToTwoDigit = (number) => {
+    return number.toLocaleString("en-US", {
+      minimumIntegerDigits: 2,
+    });
+  };
   return (
     <div className="app">
       <header className="app-header">
@@ -14,6 +43,13 @@ export default function App() {
         </p>
         <h1>Dream Stays: Singapore</h1>
         <p className="app-slogan">Where The Future is Happening</p>
+        <button
+          type="button"
+          onClick={changeColor}
+          style={{ background: bgColor }}
+        >
+          Click me!
+        </button>
       </header>
       <br />
       <div className="container">
@@ -55,6 +91,12 @@ export default function App() {
           width="150"
           height="120"
         />
+        <div className="clock">
+          <span>{time.hours}:</span>
+          <span>{time.minutes}:</span>
+          <span>{time.seconds}</span>
+          <span>{time.hours >= 12 ? " PM" : " AM"}</span>
+        </div>
       </div>
     </div>
   );
