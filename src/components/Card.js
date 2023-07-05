@@ -14,7 +14,7 @@ function Card(cardData) {
       <img
         className="card-header-img"
         alt={cardData.alt}
-        src="https://media.istockphoto.com/id/141215014/photo/etna-volcano.jpg?s=1024x1024&w=is&k=20&c=1nj-aDnyxMgiVe9kGdwuG6M9OaXiYwlmxMURBe81VMk="
+        src={cardData.img}
       />
       <p className="card-body"> {cardData.description} </p>
       <Link to={cardData.id}>

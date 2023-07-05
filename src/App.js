@@ -1,14 +1,29 @@
 import "./App.css";
-import React from "react";
+import React, { useState } from "react";
 import Card from "./components/Card";
 import { getStays } from "./data";
 
+function foo() {
+  var x = "hello"
+  return (
+    <div></div>
+  )
+}
+
 // Main app
 export default function App() {
+  // DECLARE VARIABLES !!!
+  
+   
   let stays = getStays();
+   
   return (
     <div className="app">
-      <header className="app-header">
+       <button type="button" onClick={changeColor}>
+    Click me!
+</button>
+      <header style ={{ background: bgColor}} className="app-header">
+        
         <p className="slogan">
        "Going to Sicily is better than going to the moon" - William Shakespeare</p>
         <h1>Dream Stays: Sicily</h1>
@@ -27,13 +42,13 @@ export default function App() {
           );
         })}
       </div>
-  
+
       <hr className="app-divider" />
       <div>
         <h2 className="app-subheader">Climate</h2>
         <p>
-          Sicily has some of the best weather in the world, with average highs
-          of 150 degress celcius
+          Sicily has some of the best weather in the world, with extreme highs
+          of 42 degress celcius
         </p>
       </div>
       <hr className="app-divider" />
@@ -43,14 +58,16 @@ export default function App() {
           Sicily has a rich history dating back to 1071, when it was first established as the County of Sicily, which was due to Norman Conquest of Italy.
         </p>
       </div>
-    </div>
+      <div className="footer">
+        <p> Authors: Matthew J Reddick, Richard Antanavicius.<n> Year made in 2023.</n>
+        </p>
+            </div>
+  </div>
+    
     
     
   );
 }
 
-<div className="footer">
-        <p> Authors: Matthew J Reddick, Richard Antanavicius. Year made in 2023.
-        </p>
-            </div>
+
 
