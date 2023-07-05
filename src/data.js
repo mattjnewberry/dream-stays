@@ -5,7 +5,20 @@ let stays = [
     img: "https://bynder.onthebeach.co.uk/m/155f58f6fd027a03/original/FIVE-Palm-Jumeirah-Dubai.jpg",
     description:
       "Palm Jumeirah's 5 Palm is an awe-inspiring man-made island situated in Dubai, designed in the shape of a palm tree. This iconic destination boasts a collection of opulent and world-class resorts that redefine luxury.",
-    nearby: ["Dubai Mall", "Burj Khalifa", "Atlantis, the palm"],
+    attractions: [
+  {
+    name: "Dubai Mall",
+    distance: 4.1 
+  },
+  {
+    name: "Burj Khalifa",
+    distance: 4.3
+  },
+  {
+    name: "Atlantis ",
+    distance: 4.1
+  }
+]
   },
   {
     id: "crystalpalacecamping",
