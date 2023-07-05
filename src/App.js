@@ -40,11 +40,12 @@ export default function App() {
       <div>
         <h2 className="app-subheader">History</h2>
         <p>
-          London has a rich history dating back to 43 CE. Explore edwardian and
-          victorian architecture.
+          The history of Norway has been influenced to an extraordinary degree by the terrain and the climate of the region. About 10,000 BC, following the retreat inland of the great ice sheets, the earliest inhabitants migrated north into the territory which is now Norway. 
         </p>
-      </div>
+      </div>  
+      <div className="footer">
     </div>
-    
+      </div>
+      
   );
 }
