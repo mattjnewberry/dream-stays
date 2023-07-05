@@ -2,7 +2,9 @@ import { useParams } from "react-router-dom";
 import "./stays.css";
 import { getStay } from "../data";
 import React from "react";
+import Card from "./components/Card.js" ;
 import { Link } from "react-router-dom";
+import Attractions from "./attr/NearbyAttractions.js" ;
 
 export default function Stay() {
   let params = useParams();
