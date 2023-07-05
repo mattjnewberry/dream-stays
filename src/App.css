@@ -5,8 +5,8 @@
 
 .app-header {
   width: 100%;
-  color: #f8f5f4;
-  background-color: #3662d8;
+  color: #ffffff;
+  background-color: #ae49dd;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,7 +27,7 @@
   width: 80%;
   display: flex;
   height: 2px;
-  background-color: #ba49dd;
+  background-color: #ae49dd;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -48,7 +48,7 @@
   font-size: 10px;
 }
 .app-slogan {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold; 
     font-style: italic;
     color: white
@@ -56,8 +56,8 @@
 .footer {
     width: 100%;
     height: 100px;
-    color: #f8f5f4;
-    background-color: #3662d8;
+    color: #b15132;
+    background-color: #537438;
     display: flex;
     flex-direction: column;
     align-items: center;

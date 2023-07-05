@@ -1,11 +1,18 @@
 import "./App.css";
-import React from "react";
+import React, { useState } from "react";
 import Card from "./components/Card";
 import { getStays } from "./data";
 
 // Main app
 export default function App() {
   let stays = getStays();
+  const egBlue = "3662d8"
+  const [bgColor, setBgcolor] = useState(egBlue);
+  const changeColor = () => {
+    let purple = "#A020F0";
+    setBgcolor(purple);
+};
+
   return (
     <div className="app">
       <header className="app-header">
@@ -14,7 +21,11 @@ export default function App() {
         </p>
         <h1>Dream Stays: Dubai</h1>
         <p className="app-slogan"> "Dazzling Dubai: Where Dreams Dance with Delight!"</p>
-      </header>
+        style={{ background: bgColor }}
+      </header>        
+      <button type="button" onClick={changeColor}>
+    Click me!
+</button>
       <br />
       <div className="container">
         {stays.map((stay) => {
@@ -48,7 +59,6 @@ export default function App() {
       <div classname="footer">
         <p> Author: Yacine, 2023 </p>
       </div>
-    const egBlue = "#3662d8" ;
-  </div>
+    </div>
   );
 }
