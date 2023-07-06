@@ -21,22 +21,44 @@ let stays = [
 ]
   },
   {
-    id: "crystalpalacecamping",
-    name: "Crystal Palace Camping",
-    img: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
+    id: "atlantisthepalmdubai",
+    name: "Atlantis the Palm Dubai",
+    img: "https://i0.wp.com/theluxurytravelexpert.com/wp-content/uploads/2018/12/ATLANTIS-THE-PALM-DUBAI.jpg?w=970&ssl=1",
     description:
-      "A beautiful campsite situated in the centre of Crystal Palace, surrounded by picteresque hedge rows. Late at night gaze at the flashing lights heading towards Gatwick Airport",
-    nearby: ["Crystal Palace Football Club", "Croydon"],
+      "This dynamic property is rising in Dubai from the coastline of the largest man-made island in the world, the Palm Island. Positioned as the flagship property it is, Atlantis The Palm is situated at the apex of the Palm Island’s outer crescent, surrounded by the beautifully tranquil sea of the Arabian Gulf.",
+        attractions: [
+  {
+    name: "Dubai Marina",
+    distance: 6  
   },
   {
-    id: "dorothycanalboat",
-    name: "Dorothy Canal Boat",
+    name: "The Pointe",
+    distance: 1.5
+  },
+  {
+    name: "Widi Wadi Waterpark",
+    distance: 2.2
+  },
+  {
+    id: "jumeriahbeachhotel",
+    name: "Jumeriah Beach Hotel",
     img: "https://images.unsplash.com/photo-1520086293406-c6dae2b77a64?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
     description:
       "Explore London by boat and stay at on a traditional canal boat situated on the river Thames. Dorothy is furnished with a fully working shower and microwave",
-    nearby: [""],
+        attractions: [
+  {
+    name: "Burj Al Arab",
+    distance: 1.5
   },
-];
+  {
+    name: "The Dubai Mall",
+    distance: 2
+  },
+  {
+    name: "Dubai Fountain ",
+    distance: 2.2
+  },
+]
 
 export function getStays() {
   return stays;
