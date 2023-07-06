@@ -2,9 +2,7 @@ import "./App.css";
 import React, { useState, UseEffect, useEffect } from "react";
 import Card from "./components/Card";
 import { getStays } from "./data";
-
-
-
+import ReactPlayer from "react-player";
 
 // Main app
 export default function App() {
@@ -91,6 +89,7 @@ const [time, setTime] = useState({
     <span>{time.seconds}</span>
     <span>{time.hours >= 12 ? " PM" : " AM"}</span>
   </div>
+  <ReactPlayer/>
   
   
     </div>
