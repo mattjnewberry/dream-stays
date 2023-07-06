@@ -5,6 +5,7 @@ import { getStays } from "./data";
 
 
 
+
 // Main app
 export default function App() {
   let stays = getStays();
@@ -34,7 +35,7 @@ const [time, setTime] = useState({
   
   return (
     <div className="app">
-      <header className="app-header">
+      <header  style={{ background: bgColor }} className="app-header">
         <p className="disclaimer">
           This is a fictional website for educational purposes
         </p>
@@ -42,10 +43,10 @@ const [time, setTime] = useState({
         <p className="app-slogan"> "Dazzling Dubai: Where Dreams Dance with Delight!"</p>
       </header>        
       <button type="button" 
-      onClick={changeColor}
-      style={{ background: bgColor }} >
+      onClick={changeColor} >
     Click me! 
 </button>
+
 
 
       <br />
@@ -62,6 +63,9 @@ const [time, setTime] = useState({
           );
         })}
       </div>
+      
+    
+    
       <hr className="app-divider" />
       <div>
         <h2 className="app-subheader">Climate</h2>
@@ -87,6 +91,8 @@ const [time, setTime] = useState({
     <span>{time.seconds}</span>
     <span>{time.hours >= 12 ? " PM" : " AM"}</span>
   </div>
+  
+  
     </div>
   );
 }

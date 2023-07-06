@@ -9,10 +9,12 @@ function Attractions(attractionData) {
       </tr>
     </thead>
     <tbody>
+      {attractionData.attractions.map((attraction) => (
       <tr>
-       <td>{attractionData.attractions[0].name}</td>
-        <td>{attractionData.attractions[0].distance}</td>
+       <td>{attraction.name}</td>
+        <td>{attraction.distance}</td>
       </tr>
+      ))}
     </tbody>
   </table>
   </div>

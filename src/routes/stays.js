@@ -5,6 +5,7 @@ import React from "react";
 import Card from "../components/Card.js" ;
 import { Link } from "react-router-dom";
 import Attractions from "../attr/NearbyAttractions.js" ;
+import ReactPlayer from "react-player"; 
 
 export default function Stay() {
   let params = useParams();
