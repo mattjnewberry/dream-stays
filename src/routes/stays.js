@@ -25,7 +25,7 @@ export default function Stay() {
       <h2>{stay.name}</h2>
       <Attractions attractions={stay.attractions} />
       <p className="stay-description">{stay.description}</p>
-    <ReactPlayer url='https://www.youtube.com/watch?v=RRgfZDAl1y0' />
+    <ReactPlayer classname="stay-url" url={stay.URL} />
      </div>
   ) : (
     <></>

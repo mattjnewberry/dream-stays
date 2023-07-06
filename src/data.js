@@ -3,62 +3,69 @@ let stays = [
     id: "fivepalm",
     name: "5 Palm Jumeirah",
     img: "https://bynder.onthebeach.co.uk/m/155f58f6fd027a03/original/FIVE-Palm-Jumeirah-Dubai.jpg",
+    URL: "https://www.youtube.com/watch?v=RRgfZDAl1y0",
     description:
       "Palm Jumeirah's 5 Palm is an awe-inspiring man-made island situated in Dubai, designed in the shape of a palm tree. This iconic destination boasts a collection of opulent and world-class resorts that redefine luxury.",
     attractions: [
-  {
-    name: "Dubai Mall",
-    distance: 4.1 
-  },
-  {
-    name: "Burj Khalifa",
-    distance: 4.3
-  },
-  {
-    name: "Atlantis ",
-    distance: 4.1
-  }
-]
+      {
+        name: "Dubai Mall",
+        distance: 4.1,
+      },
+      {
+        name: "Burj Khalifa",
+        distance: 4.3,
+      },
+      {
+        name: "Atlantis ",
+        distance: 4.1,
+      },
+    ],
   },
   {
     id: "atlantisthepalmdubai",
     name: "Atlantis the Palm Dubai",
-    img: "https://i0.wp.com/theluxurytravelexpert.com/wp-content/uploads/2018/12/ATLANTIS-THE-PALM-DUBAI.jpg?w=970&ssl=1",
+    img: "https://www.hoteliermiddleeast.com/2021/06/5uVQcEm5-AtlantisThePalm-Exterior-FrontShotWithRoyalPool-hme.jpg",
+    URL: "https://www.youtube.com/watch?v=RRgfZDAl1y0",
     description:
-      "This dynamic property is rising in Dubai from the coastline of the largest man-made island in the world, the Palm Island. Positioned as the flagship property it is, Atlantis The Palm is situated at the apex of the Palm Island’s outer crescent, surrounded by the beautifully tranquil sea of the Arabian Gulf.",
+      "A Atlantis, The Palm offers other-worldly luxury, combining top drawer skyline views with a never-ending list of facilities, including free access to an underwater aquarium and a waterpark.",
+    attractions: [
+      {
+        name: "Dubai Marina",
+        distance: 1.5,
+      },
+      {
+        name: "Wild Wadi waterpark",
+        distance: 2.2,
+      },
+      {
+        name: "The Pointe",
+        distance: 1.5,
+      },
+      {
+        id: "jumeriahbeachhotel",
+        name: "Jumeriah Beach Hotel",
+         img: "https://s3-eu-west-1.amazonaws.com/originaltravel.assets.d3r.com/images/hero_xlarge/97900-jumeirah-beach-hotel-exterior-shot-1.jpg",
+        URL: "https://www.youtube.com/watch?v=RRgfZDAl1y0",
+        description:
+          "Jumeirah Beach Hotel is a luxury hotel in Dubai, United Arab Emirates. The hotel, which opened in 1997, is operated by the Dubai-based hotelier Jumeirah. The hotel contains 598 rooms and suites, 19 beachfront villas, and 20 restaurants and bars.",
         attractions: [
-  {
-    name: "Dubai Marina",
-    distance: 6  
+          {
+            name: "Dubai Marina",
+            distance: 1.5,
+          },
+          {
+            name: "Wild Wadi waterpark",
+            distance: 2.2,
+          },
+          {
+            name: "The Pointe",
+            distance: 1.5,
+          },
+        ],
+      },
+    ],
   },
-  {
-    name: "The Pointe",
-    distance: 1.5
-  },
-  {
-    name: "Widi Wadi Waterpark",
-    distance: 2.2
-  },
-  {
-    id: "jumeriahbeachhotel",
-    name: "Jumeriah Beach Hotel",
-    img: "https://images.unsplash.com/photo-1520086293406-c6dae2b77a64?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80",
-    description:
-      "Explore London by boat and stay at on a traditional canal boat situated on the river Thames. Dorothy is furnished with a fully working shower and microwave",
-        attractions: [
-  {
-    name: "Burj Al Arab",
-    distance: 1.5
-  },
-  {
-    name: "The Dubai Mall",
-    distance: 2
-  },
-  {
-    name: "Dubai Fountain ",
-    distance: 2.2
-  },
-]
+];
 
 export function getStays() {
   return stays;

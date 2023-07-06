@@ -34,6 +34,12 @@ const [time, setTime] = useState({
   return (
     <div className="app">
       <header  style={{ background: bgColor }} className="app-header">
+        <div className="clock">
+    <span>{time.hours}:</span>
+    <span>{time.minutes}:</span>
+    <span>{time.seconds}</span>
+    <span>{time.hours >= 12 ? " PM" : " AM"}</span>
+  </div>
         <p className="disclaimer">
           This is a fictional website for educational purposes
         </p>
@@ -83,12 +89,7 @@ const [time, setTime] = useState({
       <div classname="footer">
         <p> Author: Yacine, 2023 </p>
       </div>
-  <div className="clock">
-    <span>{time.hours}:</span>
-    <span>{time.minutes}:</span>
-    <span>{time.seconds}</span>
-    <span>{time.hours >= 12 ? " PM" : " AM"}</span>
-  </div>
+  
   <ReactPlayer/>
   
   
