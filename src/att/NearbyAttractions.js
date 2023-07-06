@@ -1,4 +1,5 @@
 function Attractions(attractionData) {
+  console.log(attractionData);
   return (
     <div className="Attractions">
       <table>
@@ -9,10 +10,12 @@ function Attractions(attractionData) {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>{attractionData.attractions[0].name}</td>
-            <td>{attractionData.attractions[0].distance}</td>
-          </tr>
+          {attractionData.attractions.map((attraction) => (
+            <tr>
+              <td>{attraction.name}</td>
+              <td>{attraction.distance}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>

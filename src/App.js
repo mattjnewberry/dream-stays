@@ -10,7 +10,7 @@ export default function App() {
   const egBlue = "#3662d8";
   const [bgColor, setBgColor] = useState(egBlue);
   const changeColor = () => {
-    let purple = "#A020F0";
+    let purple = "#01081d";
     setBgColor(purple);
   };
   const [time, setTime] = useState({
@@ -35,19 +35,21 @@ export default function App() {
       minimumIntegerDigits: 2,
     });
   };
+
+  // <img
+  //         className="background-img"
+  //         alt="background-pic-img"
+  //         src="https://thumbs.dreamstime.com/b/vertical-distant-shot-singapore-marina-bay-sands-nighttime-156133815.jpg"
+  //       />
   return (
     <div className="app">
-      <header className="app-header">
+      <header style={{ background: bgColor }} className="app-header">
         <p className="disclaimer">
           This is a fictional website for educational purposes
         </p>
         <h1>Dream Stays: Singapore</h1>
         <p className="app-slogan">Where The Future is Happening</p>
-        <button
-          type="button"
-          onClick={changeColor}
-          style={{ background: bgColor }}
-        >
+        <button type="button" onClick={changeColor}>
           Click me!
         </button>
       </header>
@@ -61,6 +63,7 @@ export default function App() {
               name={stay.name}
               description={stay.description}
               img={stay.img}
+              className="card"
             />
           );
         })}
@@ -95,7 +98,6 @@ export default function App() {
           <span>{time.hours}:</span>
           <span>{time.minutes}:</span>
           <span>{time.seconds}</span>
-          <span>{time.hours >= 12 ? " PM" : " AM"}</span>
         </div>
       </div>
     </div>
