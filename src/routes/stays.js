@@ -3,6 +3,8 @@ import "./stays.css";
 import { getStay } from "../data";
 import React from "react";
 import { Link } from "react-router-dom";
+import Attractions from "../components/NearbyAttractions";
+import ReactPlayer from "react-player";
 
 export default function Stay() {
   let params = useParams();
@@ -13,9 +15,10 @@ export default function Stay() {
         <p className="disclaimer">
           This is a fictional website for educational purposes
         </p>
+        <Attractions attractions={stay.attractions} />
         <Link to="/">
-    <button className="nav-button">Home</button>
- </Link>
+          <button className="nav-button">Home</button>
+        </Link>
         <h1>Dream Stays</h1>
       </header>
       <img className="stay-img" alt={stay.name} src={stay.img} />

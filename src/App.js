@@ -6,35 +6,39 @@ import { useState, useEffect } from "react";
 
 // Main app
 export default function App() {
-  const egOrange = "#f3814c";
-  const [bgColor, setBgColor] = useState(egOrange);
-      const convertToTwoDigit = (number) => {
-        return number.toLocaleString("en-US", {
-        minimumIntegerDigits: 2
-        });
-    };
+  const egRed = "#BA0C2F";
+  const [bgColor, setBgColor] = useState(egRed);
+  const convertToTwoDigit = (number) => {
+    return number.toLocaleString("en-US", {
+      minimumIntegerDigits: 2,
+    });
+  };
 
   const changeColor = () => {
-    let purple = "#A020F0";
-    setBgColor(purple);
+    let blue = "#00205B";
+    if (bgColor === egRed) {
+      setBgColor(blue);
+    } else {
+      setBgColor(egRed);
+    }
   };
-const [time, setTime] = useState({
+  const [time, setTime] = useState({
     minutes: new Date().getMinutes(),
     hours: new Date().getHours(),
-    seconds: new Date().getSeconds()
-});
+    seconds: new Date().getSeconds(),
+  });
   useEffect(() => {
     const intervalId = setInterval(() => {
-        const date = new Date();
-        setTime({
-            minutes: date.getMinutes(),
-            hours: date.getHours(),
-            seconds: date.getSeconds()
-        });
+      const date = new Date();
+      setTime({
+        minutes: date.getMinutes(),
+        hours: date.getHours(),
+        seconds: date.getSeconds(),
+      });
     }, 1000);
 
     return () => clearInterval(intervalId);
-}, []);
+  }, []);
   let stays = getStays();
   return (
     <div className="app">
@@ -44,7 +48,12 @@ const [time, setTime] = useState({
         </p>
         <h1>Dream Stays: Norway </h1>
         <p className="app-slogan">Let The Aurora Amaze You!</p>
-        <button type="button" onClick={changeColor}>
+        <button
+          type="button"
+          style={{ color: bgColor }}
+          className="button"
+          onClick={changeColor}
+        >
           Click me!
         </button>
       </header>
@@ -59,6 +68,7 @@ const [time, setTime] = useState({
               name={stay.name}
               description={stay.description}
               img={stay.img}
+              buttonColor={bgColor}
             />
           );
         })}
@@ -80,11 +90,11 @@ const [time, setTime] = useState({
       </div>
       <div className="footer">2023</div>
       <div className="clock">
-    <span>{convertToTwoDigit(time.hours) }:</span>
-    <span>{time.minutes}:</span>
-    <span>{convertToTwoDigit(time.seconds) }</span>
-    <span>{time.hours >= 12 ? " PM" : " AM"}</span>
-  </div>
+        <span>{convertToTwoDigit(time.hours)}:</span>
+        <span>{time.minutes}:</span>
+        <span>{convertToTwoDigit(time.seconds)}</span>
+        <span>{time.hours >= 12 ? " PM" : " AM"}</span>
+      </div>
     </div>
   );
 }
