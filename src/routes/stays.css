@@ -1,9 +1,14 @@
 .stay-img {
   width: 100%;
   padding-top: 10px;
-  height: 50vh;
+  height: 300px;
+  object-fit: contain;
 }
 
 .stay-description {
   font-style: italic;
+  background-color: #01081d;
+}
+.stay-url {
+  object-position: center;
 }

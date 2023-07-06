@@ -72,3 +72,14 @@
   color: white;
   font-weight: lighter;
 }
+@media (max-width: 500px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-image: none;
+    background-color: #01081d;
+    background-size: cover;
+  }
+}

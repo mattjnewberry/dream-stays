@@ -9,6 +9,7 @@ import ReactPlayer from "react-player";
 export default function Stay() {
   let params = useParams();
   let stay = getStay(params.stayId);
+
   return stay ? (
     <div className="app">
       <header className="app-header">
@@ -23,8 +24,9 @@ export default function Stay() {
       <img className="stay-img" alt={stay.name} src={stay.img} />
       <h2>{stay.name}</h2>
       <Attractions attractions={stay.attractions} />
-      
       <p className="stay-description">{stay.description}</p>
+
+      <ReactPlayer className="stay-url" url={stay.URL} />
     </div>
   ) : (
     <></>
