@@ -1,6 +1,7 @@
 import "./Card.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import ReactPlayer from "react-player";
 
 function Card(cardData) {
   const [hotelPrice, setHotelPrice] = useState(0);

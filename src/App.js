@@ -3,6 +3,7 @@ import React from "react";
 import Card from "./components/Card";
 import { getStays } from "./data";
 import { useState, useEffect } from "react";
+import { Next } from "react-bootstrap/esm/PageItem";
 
 // Main app
 export default function App() {
@@ -13,6 +14,8 @@ export default function App() {
       minimumIntegerDigits: 2,
     });
   };
+  const stays = getStays();
+  const [start, setStart] = useState(0);
 
   const changeColor = () => {
     let blue = "#00205B";
@@ -22,6 +25,21 @@ export default function App() {
       setBgColor(egRed);
     }
   };
+
+  const previous = () => {
+    console.log("Click prev");
+    if (start >= 3) {
+      setStart(start - 3);
+    }
+  };
+
+  const next = () => {
+    console.log("Click next");
+    if (start < 3) {
+      setStart(start + 3);
+    }
+  };
+
   const [time, setTime] = useState({
     minutes: new Date().getMinutes(),
     hours: new Date().getHours(),
@@ -39,7 +57,7 @@ export default function App() {
 
     return () => clearInterval(intervalId);
   }, []);
-  let stays = getStays();
+
   return (
     <div className="app">
       <header className="app-header" style={{ background: bgColor }}>
@@ -60,7 +78,7 @@ export default function App() {
       <p>Have A Dream Life</p>
       <br />
       <div className="container">
-        {stays.map((stay) => {
+        {stays.slice(start, start + 3).map((stay) => {
           return (
             <Card
               key={stay.id}
@@ -72,6 +90,32 @@ export default function App() {
             />
           );
         })}
+      </div>
+      <div className="buttons-container">
+        {start >= 3 ? (
+          <button
+            type="button"
+            style={{ color: bgColor }}
+            className="button"
+            onClick={previous}
+          >
+            Previous
+          </button>
+        ) : (
+          ""
+        )}
+        {start < 3 ? (
+          <button
+            type="button"
+            style={{ color: bgColor }}
+            className="button"
+            onClick={next}
+          >
+            Next
+          </button>
+        ) : (
+          ""
+        )}
       </div>
       <hr className="app-divider" />
       <div>

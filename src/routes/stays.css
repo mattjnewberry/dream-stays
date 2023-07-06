@@ -7,3 +7,7 @@
 .stay-description {
   font-style: italic;
 }
+
+.video-container div {
+  margin: 0 auto;
+}
